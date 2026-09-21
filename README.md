@@ -1,8 +1,8 @@
 # Voidwake Studios
 
-Marketing site for **Voidwake Studios** and its flagship title **Farbound** — an original solo space sandbox for Android touchscreens and desktop browsers.
+Marketing site for **Voidwake Studios** and its flagship title **Nullharbor** — an original solo space sandbox for Android touchscreens and desktop browsers.
 
-This repository is the studio landing page only. It does not contain the game, and it must never be used to change [Farbound](https://github.com/GabeTC99/Farbound).
+This repository is the studio landing page only. It does not contain the game, and it must never be used to change the Nullharbor game repository.
 
 Import this repo in Vercel (framework: Next.js). The App Router lives in `src/app/`.
 
@@ -28,11 +28,7 @@ npm start
 
 ## Play / Get the game URL
 
-The primary CTA points at the game repository for now:
-
-`https://github.com/GabeTC99/Farbound`
-
-Change it in one place:
+The primary CTA points at the current game GitHub repository. When that repository is renamed to Nullharbor, update the slug in one place:
 
 ```ts
 // src/lib/site.ts
@@ -58,4 +54,4 @@ Placeholder frames ship in `public/screenshots/` so the gallery layout is real b
 
 ## License
 
-Site copy and layout are original to Voidwake Studios. Farbound remains a separate project with its own license and source tree.
+Site copy and layout are original to Voidwake Studios. Nullharbor remains a separate project with its own license and source tree.

@@ -9,10 +9,11 @@
 export const site = {
   studio: "Voidwake Studios",
   studioShort: "Voidwake",
-  game: "Farbound",
+  game: "Nullharbor",
   tagline: "An original solo space sandbox.",
   description:
-    "Chart uncharted systems, sell the data, and keep the hull flying. Farbound is a solo space sandbox for Android touchscreens and desktop browsers.",
+    "Chart uncharted systems, sell the data, and keep the hull flying. Nullharbor is a solo space sandbox for Android touchscreens and desktop browsers.",
+  // Keep the current game-repo URL until GabeTC99/Nullharbor exists; then switch this slug.
   playUrl: "https://github.com/GabeTC99/Farbound",
   playLabel: "Get the game",
   sourceLabel: "Source on GitHub",
@@ -20,7 +21,7 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "#farbound", label: "Farbound" },
+  { href: "#nullharbor", label: "Nullharbor" },
   { href: "#features", label: "Features" },
   { href: "#gallery", label: "Gallery" },
   { href: "#studio", label: "Studio" },

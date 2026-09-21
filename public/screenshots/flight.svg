@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
   <title id="title">Flight screenshot placeholder</title>
-  <desc id="desc">Local-space frame reserved for a Farbound flight capture.</desc>
+  <desc id="desc">Local-space frame reserved for a Nullharbor flight capture.</desc>
   <defs>
     <radialGradient id="space" cx="72%" cy="28%" r="78%">
       <stop offset="0%" stop-color="#2a3a48"/>

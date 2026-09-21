@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export function Hero() {
   return (
     <section
-      id="farbound"
+      id="nullharbor"
       aria-labelledby="hero-title"
       className="relative isolate overflow-hidden"
     >

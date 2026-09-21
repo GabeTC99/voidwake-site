@@ -3,7 +3,7 @@ import { stats } from "@/lib/site";
 export function StatsStrip() {
   return (
     <section
-      aria-label="Farbound scale"
+      aria-label="Nullharbor scale"
       className="border-border/60 border-y bg-card/40"
     >
       <ul className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-px px-4 py-8 sm:px-6 lg:grid-cols-4">

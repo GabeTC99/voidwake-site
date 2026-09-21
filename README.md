@@ -1,6 +1,6 @@
 # Voidwake Studios
 
-Marketing site for **Voidwake Studios** and its flagship title **Farbound**. This repo is the studio landing page only — do not use it to change [Farbound](https://github.com/GabeTC99/Farbound).
+Marketing site for **Voidwake Studios** and its flagship title **Nullharbor**. This repo is the studio landing page only — do not use it to change the game repository.
 
 ```sh
 npm install
@@ -15,4 +15,4 @@ Dev server: http://127.0.0.1:43127
 2. Framework: Next.js. Root directory: `.`
 3. Build command: `next build` (default). Hosting: Next.js Node, not a static export.
 
-Play CTA: `lib/site.ts` → `playUrl`.
+Play CTA: `lib/site.ts` → `playUrl`. Until the game GitHub repo is renamed to Nullharbor, that URL still targets the current repository slug.

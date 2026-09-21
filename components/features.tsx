@@ -18,7 +18,7 @@ export function Features() {
           A sandbox with work to do.
         </h2>
         <p className="text-muted-foreground mt-4 max-w-2xl text-base leading-relaxed sm:text-lg">
-          Farbound is a solo prototype: local progression, no multiplayer, no
+          Nullharbor is a solo prototype: local progression, no multiplayer, no
           on-foot play. The systems are already deep enough to get lost in.
         </p>
 

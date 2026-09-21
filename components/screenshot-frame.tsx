@@ -1,4 +1,5 @@
 import { resolveScreenshotSrc } from "@/lib/screenshots";
+import { site } from "@/lib/site";
 
 type ScreenshotFrameProps = {
   id: string;
@@ -26,7 +27,7 @@ export function ScreenshotFrame({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
-          alt={`${title} — ${caption}`}
+          alt={`${site.game} ${title} — ${caption}`}
           className="h-full w-full object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

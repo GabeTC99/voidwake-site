@@ -1,0 +1,43 @@
+name: Assemble b64 parts
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'release/b64-parts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Concatenate parts into release/b64
+        run: |
+          set -euo pipefail
+          mkdir -p release/b64
+          shopt -s nullglob
+          for dir in release/b64-parts/*; do
+            [ -d "$dir" ] || continue
+            name=$(basename "$dir")
+            mapfile -t parts < <(ls "$dir" | sort)
+            : > "release/b64/$name"
+            for p in "${parts[@]}"; do
+              cat "$dir/$p" >> "release/b64/$name"
+            done
+            echo "assembled $name $(wc -c < "release/b64/$name") bytes"
+          done
+      - name: Commit assembled chunks
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add release/b64
+          if git diff --cached --quiet; then
+            echo "No assembled file changes"
+            exit 0
+          fi
+          git commit -m "Assemble encoded static zip chunks from verified parts"
+          git push origin HEAD:main

@@ -16,6 +16,7 @@ export const site = {
   // Live Pages build after GabeTC99/Farbound → Nullharbor rename.
   playUrl: "https://gabetc99.github.io/Nullharbor/",
   playLabel: "Play Nullharbor",
+  sourceUrl: "https://github.com/GabeTC99/Nullharbor",
   sourceLabel: "Source on GitHub",
 } as const;
 

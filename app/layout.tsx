@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -37,14 +37,24 @@ export const metadata: Metadata = {
     "exploration",
   ],
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/voidwake-mark.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: `${site.game} — ${site.studio}`,
     description: site.description,
     type: "website",
     siteName: site.studio,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#070d17",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

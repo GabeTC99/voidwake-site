@@ -17,8 +17,13 @@ export const site = {
   playUrl: "https://gabetc99.github.io/Nullharbor/",
   playLabel: "Play Nullharbor",
   sourceLabel: "Source on GitHub",
-  version: "Frontiers 2.1",
 } as const;
+
+export const contacts = [
+  { label: "Support", email: "support@voidwakestudios.com" },
+  { label: "Risk", email: "risk@voidwakestudios.com" },
+  { label: "Press", email: "pr@voidwakestudios.com" },
+] as const;
 
 export const nav = [
   { href: "#nullharbor", label: "Nullharbor" },

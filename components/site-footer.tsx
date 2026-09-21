@@ -1,3 +1,4 @@
+import { ContactLinks } from "@/components/contact-links";
 import { Wordmark } from "@/components/wordmark";
 import { nav, site } from "@/lib/site";
 
@@ -12,7 +13,7 @@ export function SiteFooter() {
             flagship.
           </p>
         </div>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:gap-10">
           <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2">
             {nav.map((item) => (
               <a
@@ -30,6 +31,12 @@ export function SiteFooter() {
               {site.sourceLabel}
             </a>
           </nav>
+          <div className="space-y-2">
+            <p className="text-starlight text-[0.65rem] tracking-[0.28em] uppercase">
+              Contact
+            </p>
+            <ContactLinks compact className="flex flex-col gap-1.5" />
+          </div>
           <p className="text-muted-foreground text-xs tracking-wide">
             © {new Date().getFullYear()} {site.studio}
           </p>

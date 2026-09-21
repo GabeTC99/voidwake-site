@@ -2,7 +2,7 @@ export function Starfield() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       <svg className="h-full w-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-        <g fill="oklch(0.93 0.014 88)">
+        <g fill="#edf6f6">
           <circle className="star-twinkle" cx="80" cy="70" r="1.1" />
           <circle cx="160" cy="140" r="0.7" opacity="0.55" />
           <circle cx="240" cy="48" r="0.9" opacity="0.7" />

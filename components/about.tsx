@@ -1,3 +1,4 @@
+import { ContactLinks } from "@/components/contact-links";
 import { PlayLink } from "@/components/play-link";
 import { site } from "@/lib/site";
 
@@ -31,6 +32,12 @@ export function About() {
             you did to it. The studio name is the afterimage of a jump —
             the dark that stays when the wake fades.
           </p>
+          <div className="mt-8 space-y-3">
+            <p className="text-starlight text-xs tracking-[0.3em] uppercase">
+              Studio contacts
+            </p>
+            <ContactLinks className="flex flex-col gap-2" />
+          </div>
         </div>
         <aside className="border-border/80 bg-card/50 rounded-xl border p-7 sm:p-8">
           <p className="font-heading text-2xl leading-snug">

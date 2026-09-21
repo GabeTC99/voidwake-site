@@ -12,14 +12,14 @@ export function Hero() {
       <Starfield />
       <div className="pointer-events-none absolute inset-0">
         <div className="wake-drift bg-ice/10 absolute top-16 -left-24 size-[28rem] rounded-full blur-3xl" />
-        <div className="wake-drift bg-ember/15 absolute top-10 right-[-6rem] size-[22rem] rounded-full blur-3xl" />
+        <div className="wake-drift bg-starlight/10 absolute top-10 right-[-6rem] size-[22rem] rounded-full blur-3xl" />
         <div className="from-void via-void/80 absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t to-transparent" />
       </div>
 
       <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">
         <div>
           <p className="text-starlight mb-5 text-xs tracking-[0.34em] uppercase">
-            {site.studio} · {site.version}
+            {site.studio}
           </p>
           <h1
             id="hero-title"
@@ -66,14 +66,14 @@ function OrbitalMark() {
       >
         <defs>
           <radialGradient id="world" cx="38%" cy="36%" r="68%">
-            <stop offset="0%" stopColor="oklch(0.42 0.04 230)" />
-            <stop offset="55%" stopColor="oklch(0.22 0.03 248)" />
-            <stop offset="100%" stopColor="oklch(0.1 0.02 248)" />
+            <stop offset="0%" stopColor="#25414a" />
+            <stop offset="55%" stopColor="#12222e" />
+            <stop offset="100%" stopColor="#070d17" />
           </radialGradient>
           <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="oklch(0.82 0.07 82 / 0.15)" />
-            <stop offset="45%" stopColor="oklch(0.86 0.05 85 / 0.85)" />
-            <stop offset="100%" stopColor="oklch(0.7 0.05 210 / 0.2)" />
+            <stop offset="0%" stopColor="#90efdc26" />
+            <stop offset="45%" stopColor="#90efdcd9" />
+            <stop offset="100%" stopColor="#6db6ad33" />
           </linearGradient>
         </defs>
         <ellipse
@@ -92,7 +92,7 @@ function OrbitalMark() {
           rx="168"
           ry="40"
           fill="none"
-          stroke="oklch(0.78 0.055 210 / 0.28)"
+          stroke="#6db6ad47"
           strokeWidth="0.75"
           transform="rotate(-18 240 248)"
         />
@@ -101,14 +101,14 @@ function OrbitalMark() {
           cx="208"
           cy="208"
           r="88"
-          fill="oklch(0.09 0.012 248 / 0.45)"
+          fill="#070d1773"
         />
-        <circle cx="372" cy="118" r="3.2" fill="oklch(0.86 0.05 85)" />
-        <circle cx="96" cy="150" r="1.4" fill="oklch(0.9 0.02 85 / 0.8)" />
+        <circle cx="372" cy="118" r="3.2" fill="#90efdc" />
+        <circle cx="96" cy="150" r="1.4" fill="#b4f8e9cc" />
         <path
           d="M372 118 C 330 168, 300 210, 268 228"
           fill="none"
-          stroke="oklch(0.8 0.072 82 / 0.45)"
+          stroke="#90efdc73"
           strokeWidth="1"
         />
         <circle
@@ -116,7 +116,7 @@ function OrbitalMark() {
           cy="236"
           r="104"
           fill="none"
-          stroke="oklch(0.8 0.072 82 / 0.18)"
+          stroke="#90efdc2e"
           strokeWidth="0.6"
         />
       </svg>

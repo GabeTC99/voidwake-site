@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.studio,
   keywords: [
-    "Farbound",
+    "Nullharbor",
     "Voidwake Studios",
     "space sandbox",
     "indie game",

@@ -1,4 +1,4 @@
-name: Publish static zip release
+name: Publish static-deploy
 
 on:
   push:
@@ -9,22 +9,50 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decode zip and publish release asset
+      - name: Decode zip and force-push static-deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          if gh release view static-v1 >/dev/null 2>&1; then
-            echo "Release static-v1 already exists"
+          shopt -s nullglob
+          chunks=(release/b64/*)
+          if [ ${#chunks[@]} -eq 0 ]; then
+            echo "No release/b64 chunks yet; skip"
             exit 0
           fi
-          cat release/voidwake-static.zip.b64.* > /tmp/voidwake-static.zip.b64
-          base64 -d /tmp/voidwake-static.zip.b64 > voidwake-static.zip
-          test "$(wc -c < voidwake-static.zip)" -eq 794749
-          gh release create static-v1 voidwake-static.zip \
-            --title "Static export v1" \
-            --notes "Namecheap public_html static export of the Voidwake Studios site. Unzip with index.html at the document root."
+          cat "${chunks[@]}" > /tmp/voidwake-static.zip.b64
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, sys
+          raw = Path('/tmp/voidwake-static.zip.b64').read_bytes()
+          raw = b''.join(raw.split())
+          data = base64.b64decode(raw)
+          Path('/tmp/voidwake-static.zip').write_bytes(data)
+          print('decoded_bytes', len(data))
+          if len(data) < 700000:
+              print('incomplete zip; skip')
+              sys.exit(78)
+          PY
+          if [ "$?" -eq 78 ]; then
+            echo skip
+            exit 0
+          fi
+          mkdir -p /tmp/static-out
+          unzip -o /tmp/voidwake-static.zip -d /tmp/static-out
+          test -f /tmp/static-out/index.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan static-deploy-tmp
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a /tmp/static-out/. .
+          printf '%s\n' '# Voidwake static export' '' 'Namecheap `public_html` build. `index.html` is at the repository root.' > README.md
+          git add -A
+          git status
+          git commit -m "Publish static site to static-deploy"
+          git branch -M static-deploy
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin static-deploy

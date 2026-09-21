@@ -1,5 +1,5 @@
 import { ContactLinks } from "@/components/contact-links";
-import { PlayLink } from "@/components/play-link";
+import { PlayLink, SourceLink } from "@/components/play-link";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -44,14 +44,13 @@ export function About() {
             Ready to fly?
           </p>
           <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
-            The current public build lives in the game repository. Point{" "}
-            <code className="text-foreground/90">playUrl</code> in{" "}
-            <code className="text-foreground/90">lib/site.ts</code> at a
-            hosted build or store listing when one is live.
+            The current public build of {site.game} is live in the browser
+            — and installable as a PWA on Android. Chart a system, sell the
+            data, keep the hull flying.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <PlayLink />
-            <PlayLink variant="outline" label={site.sourceLabel} />
+            <SourceLink />
           </div>
         </aside>
       </div>

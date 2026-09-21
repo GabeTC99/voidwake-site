@@ -25,7 +25,7 @@ export function SiteFooter() {
               </a>
             ))}
             <a
-              href={site.playUrl}
+              href={site.sourceUrl}
               className="text-muted-foreground hover:text-foreground text-sm"
             >
               {site.sourceLabel}

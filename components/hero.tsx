@@ -1,4 +1,4 @@
-import { PlayLink } from "@/components/play-link";
+import { PlayLink, SourceLink } from "@/components/play-link";
 import { Starfield } from "@/components/starfield";
 import { site } from "@/lib/site";
 
@@ -37,7 +37,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <PlayLink />
-            <PlayLink variant="outline" label={site.sourceLabel} />
+            <SourceLink />
             <a
               href="#features"
               className="text-muted-foreground hover:text-foreground px-1 text-sm underline-offset-4 hover:underline"

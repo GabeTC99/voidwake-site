@@ -26,3 +26,22 @@ export function PlayLink({
     </a>
   );
 }
+
+export function SourceLink({
+  className,
+  label = site.sourceLabel,
+  variant = "outline",
+}: PlayLinkProps) {
+  return (
+    <a
+      href={site.sourceUrl}
+      className={cn(
+        buttonVariants({ variant, size: "lg" }),
+        "h-11 rounded-md px-5 text-sm tracking-wide",
+        className
+      )}
+    >
+      {label}
+    </a>
+  );
+}

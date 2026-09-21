@@ -13,8 +13,8 @@ export const site = {
   tagline: "An original solo space sandbox.",
   description:
     "Chart uncharted systems, sell the data, and keep the hull flying. Nullharbor is a solo space sandbox for Android touchscreens and desktop browsers.",
-  // Live Pages build. Path stays /Farbound/ until Gabe renames GabeTC99/Farbound in GitHub settings.
-  playUrl: "https://gabetc99.github.io/Farbound/",
+  // Live Pages build after GabeTC99/Farbound → Nullharbor rename.
+  playUrl: "https://gabetc99.github.io/Nullharbor/",
   playLabel: "Play Nullharbor",
   sourceLabel: "Source on GitHub",
   version: "Frontiers 2.1",

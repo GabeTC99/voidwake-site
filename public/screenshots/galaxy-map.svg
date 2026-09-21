@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Galaxy map screenshot placeholder</title>
+  <desc id="desc">Circular galaxy-map frame reserved for a Farbound chart capture.</desc>
+  <rect width="1600" height="900" fill="#0b0e13"/>
+  <rect width="1600" height="900" fill="#14202a" opacity="0.45"/>
+  <circle cx="800" cy="430" r="228" fill="#1a1710" stroke="#d4b072" stroke-opacity="0.7" stroke-width="2"/>
+  <circle cx="800" cy="430" r="348" fill="none" stroke="#7eb8c9" stroke-opacity="0.45" stroke-width="1.6"/>
+  <circle cx="800" cy="430" r="9" fill="#f0d48a"/>
+  <g fill="#f0d48a">
+    <circle cx="754" cy="392" r="4"/>
+    <circle cx="838" cy="380" r="3.4"/>
+    <circle cx="862" cy="454" r="3.8"/>
+    <circle cx="776" cy="478" r="3.2"/>
+    <circle cx="710" cy="444" r="3.6"/>
+    <circle cx="818" cy="512" r="3"/>
+    <circle cx="878" cy="408" r="3.3"/>
+    <circle cx="732" cy="352" r="2.8"/>
+    <circle cx="800" cy="360" r="3.1"/>
+  </g>
+  <g fill="#9fd0dc">
+    <circle cx="540" cy="236" r="3.2"/>
+    <circle cx="1060" cy="228" r="2.8"/>
+    <circle cx="1154" cy="430" r="3.4"/>
+    <circle cx="1090" cy="636" r="3"/>
+    <circle cx="800" cy="736" r="3.3"/>
+    <circle cx="500" cy="624" r="2.8"/>
+    <circle cx="458" cy="400" r="3.2"/>
+    <circle cx="628" cy="188" r="2.6"/>
+    <circle cx="990" cy="168" r="3"/>
+    <circle cx="1210" cy="528" r="2.8"/>
+    <circle cx="410" cy="520" r="2.6"/>
+    <circle cx="910" cy="714" r="3.1"/>
+    <circle cx="680" cy="700" r="2.7"/>
+    <circle cx="1020" cy="300" r="2.5"/>
+  </g>
+  <rect x="746" y="446" width="108" height="22" rx="3" fill="#0b0e13" fill-opacity="0.65"/>
+  <text x="800" y="462" text-anchor="middle" fill="#f0d48a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" letter-spacing="3">SOLACE</text>
+  <rect x="86" y="748" width="520" height="36" rx="4" fill="#0a0d11" fill-opacity="0.45"/>
+  <text x="100" y="772" fill="#d4b072" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" letter-spacing="5">GALAXY MAP / SCREENSHOT FORTHCOMING</text>
+</svg>

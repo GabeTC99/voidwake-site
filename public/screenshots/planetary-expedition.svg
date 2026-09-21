@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Planetary expedition screenshot placeholder</title>
+  <desc id="desc">Surface-skiff frame reserved for a Farbound expedition capture.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b2430"/>
+      <stop offset="48%" stop-color="#3a2a1c"/>
+      <stop offset="100%" stop-color="#6a4a2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1260" cy="150" r="58" fill="#f0d48a"/>
+  <circle cx="1260" cy="150" r="92" fill="#f0d48a" opacity="0.14"/>
+  <path d="M0 520 C 240 450, 400 590, 580 500 C 790 400, 960 580, 1180 470 C 1360 390, 1480 520, 1600 450 L 1600 900 L 0 900 Z" fill="#2a2218"/>
+  <path d="M0 610 C 280 560, 500 680, 740 600 C 1000 510, 1220 690, 1600 600 L 1600 900 L 0 900 Z" fill="#16130f"/>
+  <g transform="translate(690 470)">
+    <ellipse cx="54" cy="28" rx="70" ry="12" fill="#f0d48a" opacity="0.28"/>
+    <path d="M6 16 C 30 -18, 92 -18, 116 14 C 90 10, 34 12, 6 16 Z" fill="#efe6d4"/>
+    <rect x="46" y="0" width="20" height="10" fill="#1a1c20"/>
+    <circle cx="56" cy="5" r="2.4" fill="#7eb8c9"/>
+  </g>
+  <g fill="#8fd4e0">
+    <circle cx="420" cy="590" r="5"/>
+    <circle cx="980" cy="555" r="4"/>
+    <circle cx="1200" cy="630" r="4.6"/>
+  </g>
+  <rect x="86" y="748" width="620" height="36" rx="4" fill="#0a0d11" fill-opacity="0.45"/>
+  <text x="100" y="772" fill="#d4b072" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" letter-spacing="5">PLANETARY EXPEDITION / SCREENSHOT FORTHCOMING</text>
+</svg>

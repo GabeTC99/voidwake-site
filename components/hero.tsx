@@ -65,60 +65,105 @@ function OrbitalMark() {
         className="h-full w-full"
       >
         <defs>
-          <radialGradient id="world" cx="38%" cy="36%" r="68%">
+          <radialGradient id="orbital-world" cx="38%" cy="36%" r="68%">
             <stop offset="0%" stopColor="#25414a" />
             <stop offset="55%" stopColor="#12222e" />
             <stop offset="100%" stopColor="#070d17" />
           </radialGradient>
-          <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id="orbital-ring-far" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#90efdc26" />
-            <stop offset="45%" stopColor="#90efdcd9" />
+            <stop offset="50%" stopColor="#90efdc88" />
             <stop offset="100%" stopColor="#6db6ad33" />
           </linearGradient>
+          <linearGradient id="orbital-ring-near" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#6db6ad99" />
+            <stop offset="40%" stopColor="#90efdc" />
+            <stop offset="100%" stopColor="#b4f8e9cc" />
+          </linearGradient>
+          <clipPath id="orbital-planet">
+            <circle cx="240" cy="236" r="88" />
+          </clipPath>
         </defs>
-        <ellipse
-          cx="240"
-          cy="248"
-          rx="196"
-          ry="52"
-          fill="none"
-          stroke="url(#ring)"
-          strokeWidth="1.25"
-          transform="rotate(-18 240 248)"
-        />
-        <ellipse
-          cx="240"
-          cy="248"
-          rx="168"
-          ry="40"
-          fill="none"
-          stroke="#6db6ad47"
-          strokeWidth="0.75"
-          transform="rotate(-18 240 248)"
-        />
-        <circle cx="240" cy="236" r="88" fill="url(#world)" />
-        <circle
-          cx="208"
-          cy="208"
-          r="88"
-          fill="#070d1773"
-        />
-        <circle cx="372" cy="118" r="3.2" fill="#90efdc" />
+
         <circle cx="96" cy="150" r="1.4" fill="#b4f8e9cc" />
-        <path
-          d="M372 118 C 330 168, 300 210, 268 228"
-          fill="none"
-          stroke="#90efdc73"
-          strokeWidth="1"
-        />
+        <circle cx="404" cy="348" r="0.9" fill="#b4f8e966" />
+        <circle cx="72" cy="318" r="0.7" fill="#90efdc55" />
+
+        {/* Far equatorial rings sit behind the world */}
+        <g transform="rotate(-18 240 246)" fill="none">
+          <path
+            d="M42 246 A198 50 0 0 0 438 246"
+            stroke="url(#orbital-ring-far)"
+            strokeWidth="1.35"
+          />
+          <path
+            d="M72 246 A168 40 0 0 0 408 246"
+            stroke="#6db6ad66"
+            strokeWidth="0.8"
+          />
+        </g>
+
+        <circle cx="240" cy="236" r="88" fill="url(#orbital-world)" />
+        <g clipPath="url(#orbital-planet)">
+          <circle cx="208" cy="208" r="88" fill="#070d1773" />
+          <ellipse
+            cx="240"
+            cy="246"
+            rx="198"
+            ry="50"
+            fill="none"
+            stroke="#070d17"
+            strokeWidth="13"
+            opacity="0.5"
+            transform="rotate(-18 240 246)"
+          />
+        </g>
         <circle
           cx="240"
           cy="236"
-          r="104"
+          r="88.6"
           fill="none"
-          stroke="#90efdc2e"
+          stroke="#90efdc22"
           strokeWidth="0.6"
         />
+
+        {/* Near equatorial rings pass in front of the disk */}
+        <g transform="rotate(-18 240 246)" fill="none">
+          <path
+            d="M42 246 A198 50 0 0 1 438 246"
+            stroke="url(#orbital-ring-near)"
+            strokeWidth="1.85"
+          />
+          <path
+            d="M72 246 A168 40 0 0 1 408 246"
+            stroke="#90efdcb8"
+            strokeWidth="1.05"
+          />
+        </g>
+
+        {/* Probe on a high orbital wake that stays in space above the world */}
+        <g transform="rotate(-52 240 236)" fill="none">
+          <path
+            d="M401.8 201.9 A200 58 0 0 1 435.6 248.1"
+            stroke="#90efdc88"
+            strokeWidth="1.05"
+            strokeLinecap="round"
+          />
+          <path
+            d="M438.1 227.9 A200 58 0 0 1 435.6 248.1"
+            stroke="#90efdc"
+            strokeWidth="1.25"
+            strokeLinecap="round"
+          />
+          <circle
+            cx="435.6"
+            cy="248.1"
+            r="5.4"
+            stroke="#90efdc77"
+            strokeWidth="0.75"
+          />
+          <circle cx="435.6" cy="248.1" r="3.15" fill="#90efdc" />
+        </g>
       </svg>
       <figcaption className="text-muted-foreground mt-2 text-center text-xs tracking-[0.22em] uppercase">
         192 systems · Solace at the core

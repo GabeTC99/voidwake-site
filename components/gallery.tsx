@@ -20,9 +20,8 @@ export function Gallery() {
             From the cockpit, the dock, and the dirt.
           </h2>
           <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-            Frames are ready for production captures. Drop images into{" "}
-            <code className="text-foreground/90">public/screenshots/</code> using
-            the filenames in that folder&apos;s README.
+            Four frames from the current build — local space, the dock, the
+            circular core, and a skiff over the dirt.
           </p>
         </div>
 

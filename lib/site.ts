@@ -19,8 +19,7 @@ export const site = {
   playLabel: "Play Nullharbor",
   apkUrl: "https://github.com/GabeTC99/Nullharbor/releases/latest",
   apkLabel: "Download Android",
-  apkNote:
-    "Allow the install from your browser if Android asks. Fold and PWA testers who want 120 Hz should use the APK — web play stays on the Pages beta.",
+  apkNote: "Android may ask you to allow installs from your browser.",
   sourceUrl: "https://github.com/GabeTC99/Nullharbor",
   sourceLabel: "Source on GitHub",
 } as const;

@@ -48,7 +48,7 @@ export function Hero() {
                   What you can do
                 </a>
               </div>
-              <p className="text-ice/80 max-w-xl text-xs tracking-[0.14em] sm:text-[0.8rem]">
+              <p className="text-ice/80 max-w-2xl text-xs tracking-[0.06em]">
                 {site.heroCtaNote}
               </p>
             </div>

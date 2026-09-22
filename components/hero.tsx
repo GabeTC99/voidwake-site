@@ -36,16 +36,21 @@ export function Hero() {
             Sell the data. Keep the ship flying.
           </p>
           <div className="mt-8 flex flex-col gap-4">
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <PlayLink />
-              <ApkLink />
-              <SourceLink />
-              <a
-                href="#features"
-                className="text-muted-foreground hover:text-foreground px-1 text-sm underline-offset-4 hover:underline"
-              >
-                What you can do
-              </a>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <PlayLink />
+                <ApkLink />
+                <SourceLink />
+                <a
+                  href="#features"
+                  className="text-muted-foreground hover:text-foreground px-1 text-sm underline-offset-4 hover:underline"
+                >
+                  What you can do
+                </a>
+              </div>
+              <p className="text-ice/80 max-w-xl text-xs tracking-[0.14em] sm:text-[0.8rem]">
+                {site.heroCtaNote}
+              </p>
             </div>
             <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
               {site.apkNote}

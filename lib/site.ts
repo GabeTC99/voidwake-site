@@ -22,6 +22,8 @@ export const site = {
   apkUrl: "/download/android",
   apkLabel: "Download Android",
   apkNote: "Android may ask you to allow installs from your browser.",
+  heroCtaNote:
+    "Free in-browser prototype · Desktop keyboard & Android touch · No login required",
   sourceUrl: "https://github.com/GabeTC99/Nullharbor",
   sourceLabel: "Source on GitHub",
 } as const;

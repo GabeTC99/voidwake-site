@@ -2,8 +2,9 @@
  * Voidwake Studios — site copy and links.
  *
  * Change `playUrl` here when a public playable build or store listing is ready.
- * `apkUrl` always points at the latest fixed-name APK via GitHub
- * Releases `latest/download` — do not pin a versioned asset.
+ * `apkUrl` is the same-origin hop (`/download/android`) that resolves the
+ * latest fixed-name GitHub Releases APK and 302s once to the asset CDN.
+ * Do not pin a versioned asset.
  * Screenshot filenames live in `screenshots` — drop matching files in
  * `public/screenshots/` (see that folder's README).
  */
@@ -18,7 +19,7 @@ export const site = {
   // Live Pages build after GabeTC99/Farbound → Nullharbor rename.
   playUrl: "https://gabetc99.github.io/Nullharbor/",
   playLabel: "Play Nullharbor",
-  apkUrl: "https://github.com/GabeTC99/Nullharbor/releases/latest/download/Nullharbor.apk",
+  apkUrl: "/download/android",
   apkLabel: "Download Android",
   apkNote: "Android may ask you to allow installs from your browser.",
   sourceUrl: "https://github.com/GabeTC99/Nullharbor",

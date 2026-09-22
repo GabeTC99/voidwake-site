@@ -13,10 +13,19 @@ function SiteCta({
   label,
   variant,
   className,
-}: SiteCtaProps & { href: string; label: string }) {
+  download,
+  rel,
+}: SiteCtaProps & {
+  href: string;
+  label: string;
+  download?: string;
+  rel?: string;
+}) {
   return (
     <a
       href={href}
+      download={download}
+      rel={rel}
       className={cn(
         buttonVariants({ variant, size: "lg" }),
         "h-11 rounded-md px-5 text-sm tracking-wide",
@@ -54,6 +63,8 @@ export function ApkLink({
       label={label}
       variant={variant}
       className={className}
+      download="Nullharbor.apk"
+      rel="noopener"
     />
   );
 }

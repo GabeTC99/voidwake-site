@@ -16,4 +16,4 @@ Dev server: http://127.0.0.1:43127
 3. Build command: `next build` (default). Hosting: Next.js Node, not a static export.
 
 Play CTA: `lib/site.ts` → `playUrl`.
-Android APK: `lib/site.ts` → `apkUrl` (always `releases/latest/download/Nullharbor.apk` — do not pin a versioned asset).
+Android APK: `lib/site.ts` → `apkUrl` (`/download/android` — same-origin hop that 302s to the latest `Nullharbor.apk` asset; do not pin a versioned asset).

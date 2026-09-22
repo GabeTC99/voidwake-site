@@ -48,10 +48,10 @@ export function About() {
             — and installable as a PWA on Android. Chart a system, sell the
             data, keep the hull flying.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <PlayLink />
-            <ApkLink />
-            <SourceLink />
+          <div className="mt-6 flex flex-col gap-3">
+            <PlayLink className="w-full" />
+            <ApkLink className="w-full" />
+            <SourceLink className="w-full" />
           </div>
           <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
             {site.apkNote}

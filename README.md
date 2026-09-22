@@ -15,4 +15,5 @@ Dev server: http://127.0.0.1:43127
 2. Framework: Next.js. Root directory: `.`
 3. Build command: `next build` (default). Hosting: Next.js Node, not a static export.
 
-Play CTA: `lib/site.ts` → `playUrl`. Until the game GitHub repo is renamed to Nullharbor, that URL still targets the current repository slug.
+Play CTA: `lib/site.ts` → `playUrl`.
+Android APK: `lib/site.ts` → `apkUrl` (always `releases/latest` — do not pin a versioned asset).

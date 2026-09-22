@@ -1,4 +1,4 @@
-import { PlayLink, SourceLink } from "@/components/play-link";
+import { ApkLink, PlayLink, SourceLink } from "@/components/play-link";
 import { Starfield } from "@/components/starfield";
 import { site } from "@/lib/site";
 
@@ -35,15 +35,21 @@ export function Hero() {
             original for touchscreens and the desktop browser. Chart the Reach.
             Sell the data. Keep the ship flying.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <PlayLink />
-            <SourceLink />
-            <a
-              href="#features"
-              className="text-muted-foreground hover:text-foreground px-1 text-sm underline-offset-4 hover:underline"
-            >
-              What you can do
-            </a>
+          <div className="mt-8 flex flex-col gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <PlayLink />
+              <ApkLink />
+              <SourceLink />
+              <a
+                href="#features"
+                className="text-muted-foreground hover:text-foreground px-1 text-sm underline-offset-4 hover:underline"
+              >
+                What you can do
+              </a>
+            </div>
+            <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
+              {site.apkNote}
+            </p>
           </div>
         </div>
 

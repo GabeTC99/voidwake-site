@@ -1,5 +1,5 @@
 import { ContactLinks } from "@/components/contact-links";
-import { PlayLink, SourceLink } from "@/components/play-link";
+import { ApkLink, PlayLink, SourceLink } from "@/components/play-link";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -48,10 +48,14 @@ export function About() {
             — and installable as a PWA on Android. Chart a system, sell the
             data, keep the hull flying.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <PlayLink />
+            <ApkLink />
             <SourceLink />
           </div>
+          <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+            {site.apkNote}
+          </p>
         </aside>
       </div>
     </section>

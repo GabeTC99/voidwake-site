@@ -99,15 +99,21 @@
 
   html {
     scroll-behavior: smooth;
+    /* Solid canvas color so body's atmosphere is not propagated to a
+       viewport-sized canvas (mobile browsers tile that, causing a hard
+       horizontal seam through hero/studio text). */
+    background-color: var(--void);
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
     background-color: var(--void);
     background-image:
       radial-gradient(1200px 700px at 12% -10%, color-mix(in oklab, #90efdc 14%, transparent), transparent 58%),
       radial-gradient(900px 560px at 92% 8%, color-mix(in oklab, #6db6ad 12%, transparent), transparent 52%),
       radial-gradient(800px 500px at 70% 110%, color-mix(in oklab, #25414a 28%, transparent), transparent 55%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   h1,

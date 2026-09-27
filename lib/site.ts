@@ -42,7 +42,7 @@ export const nav = [
 
 export const stats = [
   { value: "~1M", label: "Star systems" },
-  { value: "64", label: "Hand-built home systems" },
+  { value: "5", label: "Careers to sign on with" },
   { value: "26", label: "Hulls from six shipyards" },
   { value: "6", label: "Factions with territory" },
 ] as const;
@@ -67,6 +67,21 @@ export const features = [
     id: "ships",
     title: "Ships & outfitting",
     body: "Twenty-six hulls from six manufacturers, from the starter Wisp to the Imperator super-freighter. Core internals, hardpoints and optional slots, modules in classes 1–6 and grades E–A, and a power budget to respect.",
+  },
+  {
+    id: "careers",
+    title: "Careers",
+    body: "Sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Work shifts of orders, climb five grades, earn unique modules — and live with the rivals your employer comes with.",
+  },
+  {
+    id: "fleet",
+    title: "Company ships & your fleet",
+    body: "Clock in to fly a company ship in your employer's colours, serviced free and replaced if lost. Make grade four and one is yours to keep. Own several hulls, store them at stations and switch between them. Security ships come with police lights.",
+  },
+  {
+    id: "housing",
+    title: "A home among the stars",
+    body: "Buy anything from a bunk pod to a penthouse at any station. Your first home is your home port. Fit lockers, a data vault, hydroponics or a sublet room, arrange the furniture, and invite contacts from the bar over to talk business.",
   },
   {
     id: "landings",
@@ -101,6 +116,16 @@ export const screenshots = [
     id: "shipyard",
     title: "Shipyard",
     caption: "Twenty-six hulls, each with its own slots and stock loadout.",
+  },
+  {
+    id: "careers",
+    title: "Careers",
+    caption: "Five employers, five grades, and company ships on shift.",
+  },
+  {
+    id: "housing",
+    title: "Housing",
+    caption: "A furnished penthouse with the station's planet out the window.",
   },
   {
     id: "planetary-expedition",

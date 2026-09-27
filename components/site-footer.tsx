@@ -1,5 +1,5 @@
 import { Wordmark } from "@/components/wordmark";
-import { nav, site } from "@/lib/site";
+import { mailto, nav, site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -23,6 +23,12 @@ export function SiteFooter() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={mailto}
+              className="text-muted-foreground hover:text-foreground text-sm"
+            >
+              Contact
+            </a>
             <a
               href={site.sourceUrl}
               className="text-muted-foreground hover:text-foreground text-sm"

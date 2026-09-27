@@ -11,7 +11,7 @@ export function Wordmark({ compact = false }: { compact?: boolean }) {
         alt=""
         width={32}
         height={32}
-        className="border-starlight/25 size-8 rounded-full border object-cover"
+        className="border-amber/30 size-8 rounded-full border object-cover"
       />
       <span className="leading-none">
         <span className="text-foreground block text-[0.7rem] tracking-[0.28em] uppercase">

@@ -1,34 +1,35 @@
-import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { site } from "@/lib/site";
+import { mailto, site } from "@/lib/site";
+
+type Variant = "solid" | "outline" | "ghost";
 
 type SiteCtaProps = {
   className?: string;
   label?: string;
-  variant?: "default" | "outline" | "ghost";
+  variant?: Variant;
+};
+
+// Mirrors Starwake's `.btn`, `.btn.solid` and `.btn.ghost`.
+const variants: Record<Variant, string> = {
+  solid: "border-amber bg-amber text-primary-foreground hover:bg-[#ffc070]",
+  outline:
+    "border-amber text-amber hover:bg-amber hover:text-primary-foreground",
+  ghost:
+    "border-muted-foreground text-foreground hover:bg-muted-foreground hover:text-[#0a0a14]",
 };
 
 function SiteCta({
   href,
   label,
-  variant,
+  variant = "solid",
   className,
-  download,
-  rel,
-}: SiteCtaProps & {
-  href: string;
-  label: string;
-  download?: string;
-  rel?: string;
-}) {
+}: SiteCtaProps & { href: string; label: string }) {
   return (
     <a
       href={href}
-      download={download}
-      rel={rel}
       className={cn(
-        buttonVariants({ variant, size: "lg" }),
-        "h-11 rounded-md px-5 text-sm tracking-wide",
+        "sw-btn focus-visible:outline-ice inline-flex h-11 shrink-0 items-center justify-center border px-5 text-[0.95rem] font-semibold tracking-[0.04em] whitespace-nowrap transition-colors focus-visible:outline-2 focus-visible:outline-offset-2",
+        variants[variant],
         className
       )}
     >
@@ -40,7 +41,7 @@ function SiteCta({
 export function PlayLink({
   className,
   label = site.playLabel,
-  variant = "default",
+  variant = "solid",
 }: SiteCtaProps) {
   return (
     <SiteCta
@@ -52,31 +53,29 @@ export function PlayLink({
   );
 }
 
-export function ApkLink({
-  className,
-  label = site.apkLabel,
-  variant = "default",
-}: SiteCtaProps) {
-  return (
-    <SiteCta
-      href={site.apkUrl}
-      label={label}
-      variant={variant}
-      className={className}
-      download="Nullharbor.apk"
-      rel="noopener"
-    />
-  );
-}
-
 export function SourceLink({
   className,
   label = site.sourceLabel,
-  variant = "outline",
+  variant = "ghost",
 }: SiteCtaProps) {
   return (
     <SiteCta
       href={site.sourceUrl}
+      label={label}
+      variant={variant}
+      className={className}
+    />
+  );
+}
+
+export function ContactLink({
+  className,
+  label = site.contactLabel,
+  variant = "outline",
+}: SiteCtaProps) {
+  return (
+    <SiteCta
+      href={mailto}
       label={label}
       variant={variant}
       className={className}

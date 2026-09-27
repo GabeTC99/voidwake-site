@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-chakra);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-serif);
+  --font-heading: var(--font-chakra);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,9 +39,12 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-starlight: var(--starlight);
-  --color-ember: var(--ember);
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
   --color-ice: var(--ice);
+  --color-lime: var(--lime);
+  --color-coral: var(--coral);
+  --color-panel2: var(--panel2);
   --color-void: var(--void);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -54,42 +57,45 @@
 
 :root,
 .dark {
-  --background: #0a141d;
-  --foreground: #edf6f6;
-  --card: #0d1a24;
-  --card-foreground: #edf6f6;
-  --popover: #0d1a24;
-  --popover-foreground: #edf6f6;
-  --primary: #90efdc;
-  --primary-foreground: #092721;
-  --secondary: #12222e;
-  --secondary-foreground: #edf6f6;
-  --muted: #12222e;
-  --muted-foreground: #91a6b2;
-  --accent: #122c32;
-  --accent-foreground: #b4f8e9;
-  --destructive: #fa8d8d;
-  --border: color-mix(in oklab, #90efdc 18%, transparent);
-  --input: color-mix(in oklab, #90efdc 16%, transparent);
-  --ring: #90efdc;
-  --chart-1: #90efdc;
-  --chart-2: #6db6ad;
-  --chart-3: #eeab6c;
-  --chart-4: #25414a;
-  --chart-5: #12222e;
+  --background: #060818;
+  --foreground: #e9dcc6;
+  --card: rgba(10, 14, 34, 0.94);
+  --card-foreground: #e9dcc6;
+  --popover: #0a0e22;
+  --popover-foreground: #e9dcc6;
+  --primary: #ffa640;
+  --primary-foreground: #1a0e02;
+  --secondary: #121834;
+  --secondary-foreground: #e9dcc6;
+  --muted: #121834;
+  --muted-foreground: #8f8aa0;
+  --accent: #1a1740;
+  --accent-foreground: #ffc070;
+  --destructive: #ff6b57;
+  --border: rgba(255, 166, 64, 0.28);
+  --input: rgba(255, 166, 64, 0.28);
+  --ring: #7fe3ff;
+  --chart-1: #ffa640;
+  --chart-2: #7fe3ff;
+  --chart-3: #9dff7a;
+  --chart-4: #ff6b57;
+  --chart-5: #9a5a1c;
   --radius: 0.5rem;
-  --sidebar: #0d1a24;
-  --sidebar-foreground: #edf6f6;
-  --sidebar-primary: #90efdc;
-  --sidebar-primary-foreground: #092721;
-  --sidebar-accent: #122c32;
-  --sidebar-accent-foreground: #b4f8e9;
-  --sidebar-border: color-mix(in oklab, #90efdc 18%, transparent);
-  --sidebar-ring: #90efdc;
-  --starlight: #90efdc;
-  --ember: #6db6ad;
-  --ice: #b4f8e9;
-  --void: #070d17;
+  --sidebar: #0a0e22;
+  --sidebar-foreground: #e9dcc6;
+  --sidebar-primary: #ffa640;
+  --sidebar-primary-foreground: #1a0e02;
+  --sidebar-accent: #1a1740;
+  --sidebar-accent-foreground: #ffc070;
+  --sidebar-border: rgba(255, 166, 64, 0.28);
+  --sidebar-ring: #7fe3ff;
+  --amber: #ffa640;
+  --amber-dim: #9a5a1c;
+  --ice: #7fe3ff;
+  --lime: #9dff7a;
+  --coral: #ff6b57;
+  --panel2: rgba(18, 24, 52, 0.9);
+  --void: #060818;
 }
 
 @layer base {
@@ -109,9 +115,9 @@
     @apply text-foreground font-sans antialiased;
     background-color: var(--void);
     background-image:
-      radial-gradient(1200px 700px at 12% -10%, color-mix(in oklab, #90efdc 14%, transparent), transparent 58%),
-      radial-gradient(900px 560px at 92% 8%, color-mix(in oklab, #6db6ad 12%, transparent), transparent 52%),
-      radial-gradient(800px 500px at 70% 110%, color-mix(in oklab, #25414a 28%, transparent), transparent 55%);
+      radial-gradient(1100px 700px at 70% -8%, color-mix(in oklab, #1a1740 90%, transparent), transparent 62%),
+      radial-gradient(900px 560px at 8% 12%, color-mix(in oklab, #2a3350 45%, transparent), transparent 55%),
+      radial-gradient(800px 500px at 70% 110%, color-mix(in oklab, #ffa640 7%, transparent), transparent 55%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -120,8 +126,9 @@
   h2,
   h3,
   .font-heading {
-    font-family: var(--font-serif), ui-serif, Georgia, serif;
-    font-weight: 400;
+    font-family: var(--font-chakra), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -161,4 +168,18 @@
 
 .wake-drift {
   animation: drift 28s ease-in-out alternate infinite;
+}
+
+/* Starwake's clipped-corner shapes: small radius on one diagonal, large on
+   the other, as on the game's buttons, panels and save slots. */
+.sw-btn {
+  border-radius: 3px 10px 3px 10px;
+}
+
+.sw-panel {
+  border-radius: 4px 18px 4px 18px;
+}
+
+.sw-glow {
+  text-shadow: 0 0 40px rgba(255, 166, 64, 0.25);
 }

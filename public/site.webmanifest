@@ -1,11 +1,11 @@
 {
   "name": "Voidwake Studios",
   "short_name": "Voidwake",
-  "description": "Chart uncharted systems, sell the data, and keep the hull flying. Nullharbor is a solo space sandbox for Android touchscreens and desktop browsers.",
+  "description": "Voidwake Studios makes Starwake, a 2D space frontier for the browser: trade, mine, hunt pirates, land on planets and explore a galaxy of a million star systems.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#070d17",
-  "theme_color": "#070d17",
+  "background_color": "#060818",
+  "theme_color": "#060818",
   "icons": [
     {
       "src": "/icon-192.png",

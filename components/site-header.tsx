@@ -12,7 +12,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-border/70 bg-void/70 sticky top-0 z-40 border-b backdrop-blur-md">
+    <header className="border-border/70 bg-void/75 sticky top-0 z-40 border-b backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Wordmark />
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
@@ -27,7 +27,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <PlayLink className="hidden sm:inline-flex" />
+          <PlayLink className="hidden h-9 px-4 text-sm sm:inline-flex" />
           <button
             type="button"
             className={cn(

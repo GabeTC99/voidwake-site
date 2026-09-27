@@ -1,6 +1,6 @@
 # Voidwake Studios
 
-Marketing site for **Voidwake Studios** and its flagship title **Nullharbor**. This repo is the studio landing page only — do not use it to change the game repository.
+Marketing site for **Voidwake Studios** and its flagship title **Starwake**, a 2D space frontier that runs in the browser. This repo is the studio landing page only — do not use it to change the game repository.
 
 ```sh
 npm install
@@ -16,4 +16,6 @@ Dev server: http://127.0.0.1:43127
 3. Build command: `next build` (default). Hosting: Next.js Node, not a static export.
 
 Play CTA: `lib/site.ts` → `playUrl`.
-Android APK: `lib/site.ts` → `apkUrl` (`/download/android` — same-origin hop that 302s to the latest `Nullharbor.apk` asset; do not pin a versioned asset).
+Contact: `lib/site.ts` → `contactEmail`. Every mailto link on the page uses it; the address itself is not printed.
+
+The look follows Starwake's own UI: the void/amber/ice palette, Chakra Petch, and the clipped-corner `.sw-btn` / `.sw-panel` shapes in `app/globals.css`.

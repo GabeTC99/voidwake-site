@@ -8,6 +8,8 @@ Drop production captures here. The gallery looks for these filenames, in this or
 | Galaxy map | `galaxy-map.jpg` (same extension order) |
 | Stations | `stations.jpg` |
 | Shipyard | `shipyard.jpg` |
+| Careers | `careers.jpg` |
+| Housing | `housing.jpg` |
 | Planetary landing | `planetary-expedition.jpg` |
 
 ## Specs

@@ -30,9 +30,9 @@ export function Hero() {
             {site.tagline}
           </p>
           <p className="text-muted-foreground mt-4 max-w-xl text-base leading-relaxed sm:text-[1.0625rem]">
-            Trade between stations, mine asteroid rings, answer distress
-            calls and hunt pirate aces for bounties — or jump out past the
-            charted systems and sell what you find to Universal Cartographics.
+            Trade between stations, mine asteroid rings, answer distress calls
+            and hunt pirate aces for bounties — or jump out past the charted
+            systems and sell what you find to the Cartographic Guild.
           </p>
           <div className="mt-8 flex flex-col gap-3">
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">

@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.siteUrl),
   title: {
     default: `${site.game} — ${site.studio}`,
     template: `%s — ${site.studio}`,

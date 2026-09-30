@@ -16,7 +16,7 @@ export const site = {
   kicker: "a 2D space frontier",
   tagline: "Trade, fight and chart your way across a million stars.",
   description:
-    "Starwake is a 2D space frontier for the browser: trade between stations, mine asteroid rings, hunt pirate aces, land on planets, walk stations and explore a spiral galaxy of about a million star systems.",
+    "Starwake is a 2D space frontier for the browser and Android: trade between stations, mine asteroid rings, hunt pirate aces, sign on for a career, land on planets, walk stations and explore a spiral galaxy of about a million star systems.",
   playUrl: "https://gabetc99.github.io/Starwake/",
   playLabel: "Play Starwake",
   heroCtaNote:
@@ -27,17 +27,32 @@ export const site = {
   sourceLabel: "Source on GitHub",
   contactEmail: "gabe@voidwakestudios.com",
   contactLabel: "Email the studio",
+  siteUrl: "https://www.voidwakestudios.com",
+  // Android package name, as registered in Google Play Console.
+  androidPackage: "io.github.gabetc99.starwake",
+  // Flip to true once the Play listing is published; until then the site says "coming soon".
+  googlePlayLive: false,
+  privacyUpdated: "30 September 2026",
 } as const;
 
+export const googlePlayUrl = `https://play.google.com/store/apps/details?id=${site.androidPackage}`;
+
 export const mailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
-  `${site.game} — hello from the site`
+  `${site.game} — hello from the site`,
 )}`;
 
+// Root-relative so the header and footer work from /privacy and /support too.
 export const nav = [
-  { href: "#starwake", label: "Starwake" },
-  { href: "#features", label: "Features" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#studio", label: "Studio" },
+  { href: "/#starwake", label: "Starwake" },
+  { href: "/#features", label: "Features" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#studio", label: "Studio" },
+  { href: "/support", label: "Support" },
+] as const;
+
+export const legalNav = [
+  { href: "/privacy", label: "Privacy policy" },
+  { href: "/support", label: "Support" },
 ] as const;
 
 export const stats = [
@@ -56,22 +71,32 @@ export const features = [
   {
     id: "trade",
     title: "Trade, mine & hunt",
-    body: "Run cargo between economies, strip asteroid rings, and chase bounties on named pirate aces. Famines, booms, outbreaks and pirate surges move prices across the map — markets show the news nearby.",
+    body: "Run cargo between economies, strip asteroid rings, and chase bounties on named pirate aces. Selling a load moves the price, so the real margins are a jump away. Famines, booms, outbreaks and pirate surges move markets across the map.",
   },
   {
     id: "signals",
     title: "Signals & missions",
-    body: "Drop out of supercruise on wrecks, distress calls, pirate nests and anomalies. Courier, delivery, survey and assassination contracts, passenger charters and VIPs with demands — all tracked in the mission journal.",
+    body: "Drop out of slipstream on wrecks, distress calls, pirate nests and anomalies. Courier, delivery, survey and assassination contracts, passenger charters and VIPs with demands — all tracked in the mission journal.",
+  },
+  {
+    id: "traffic",
+    title: "Living traffic",
+    body: "Traders fly real errands between stations and jump to neighbouring systems, where they actually arrive and sell. Police patrol in pairs, stop ships for cargo scans (yours too) and answer pirate attacks. Nearby pilots chatter on comms.",
+  },
+  {
+    id: "discovery",
+    title: "Scan & chart",
+    body: "Tune the resonance scanner onto a system's hidden bodies, then fire mapping probes onto a planet's surface. Sell the data to the Cartographic Guild — it pays more the further from home, and more again inside a nebula.",
   },
   {
     id: "ships",
     title: "Ships & outfitting",
-    body: "Twenty-six hulls from six manufacturers, from the starter Wisp to the Imperator super-freighter. Core internals, hardpoints and optional slots, modules in classes 1–6 and grades E–A, and a power budget to respect.",
+    body: "Twenty-six hulls from six manufacturers, from the starter Wisp to the Imperator super-freighter. Core internals, hardpoints and optional slots, modules in classes 1–6 and marks Mk1–Mk5, and a power budget to respect.",
   },
   {
     id: "careers",
     title: "Careers",
-    body: "Sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Work shifts of orders, climb five grades, earn unique modules — and live with the rivals your employer comes with.",
+    body: "Sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Every promotion changes the work: convoy escorts, heists, close stellar passes, deep-core blasting — and wingmen of your own at the top grade.",
   },
   {
     id: "fleet",
@@ -86,12 +111,17 @@ export const features = [
   {
     id: "landings",
     title: "Land, drive & walk",
-    body: "Set down on rocky, icy and metal-rich worlds, deploy an SRV, sample alien plants on foot. Dock and walk the concourse — market, shipyard, bar and engineers who upgrade modules with what you gathered.",
+    body: "Set down on rocky, icy and metal-rich worlds, deploy a rover, sample alien plants on foot. Dock and walk the concourse — market, shipyard, bar and engineers who upgrade modules with what you gathered.",
+  },
+  {
+    id: "sound",
+    title: "Soundtrack & ship voice",
+    body: "About ninety minutes of recorded orchestral score that crossfades between open space, combat, stations, the deep frontier and home. An onboard computer calls out shields, heat and interdictions, and pirates hail before they attack.",
   },
   {
     id: "platforms",
-    title: "Anywhere you have a browser",
-    body: "No install, no build, no account. Keyboard and mouse, touch or gamepad. Add it to your home screen and it runs full-screen and offline, with an autopilot for long hauls and cloud saves across devices.",
+    title: "Browser, Android & Windows",
+    body: "Play free in any modern browser, or install it as an app. Keyboard and mouse, touch or gamepad. No account and no ads — an optional sync code carries your pilots between devices, and an autopilot handles the long hauls.",
   },
 ] as const;
 
@@ -134,4 +164,10 @@ export const screenshots = [
   },
 ] as const;
 
-export const screenshotExtensions = ["jpg", "jpeg", "webp", "png", "svg"] as const;
+export const screenshotExtensions = [
+  "jpg",
+  "jpeg",
+  "webp",
+  "png",
+  "svg",
+] as const;

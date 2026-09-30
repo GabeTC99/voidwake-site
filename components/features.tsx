@@ -18,8 +18,8 @@ export function Features() {
           A galaxy with work to do.
         </h2>
         <p className="text-muted-foreground mt-4 max-w-2xl text-base leading-relaxed sm:text-lg">
-          {site.game} runs in the browser with no build step and no
-          dependencies. Everything below is in the current build.
+          {site.game} runs in any modern browser and as an app on Android and
+          Windows. Everything below is in the current build.
         </p>
 
         <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

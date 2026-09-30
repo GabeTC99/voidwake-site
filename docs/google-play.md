@@ -33,41 +33,51 @@ Starwake: Space Frontier
 Trade, fight and chart your way across a million-star galaxy. No ads or IAP.
 ```
 
-**Full description** (4,000 max; about 2,600 here)
+**Full description** (4,000 max; about 2,700 here). Blank lines separate the sections and `<b>` bolds the headings; Play supports both.
 
 ```
 Starwake is a 2D space frontier: a whole spiral galaxy of about a million star systems, with work to do in every one of them.
 
+
 Start in a little Wisp at Sorensen Relay. Run cargo between stations, strip asteroid rings, answer distress calls and hunt pirate aces for bounties — or jump out past the charted systems and sell what you find to the Cartographic Guild.
 
-A LIVING GALAXY
+
+<b>A LIVING GALAXY</b>
 • 64 hand-built home systems, then a million more generated star by star: old stars toward the core, young blue stars on the arms, red dwarfs at the rim.
 • Eight landmarks, from The Maw, the black hole at the galactic core, to Last Light at the rim, and nine nebulae that pay more for data.
 • Traders fly real routes and jump to real neighbouring systems. Police patrol in pairs and scan cargo — yours included.
 • Markets react: sell a load and the price drops. Famines, booms, outbreaks and pirate surges move prices across the map.
 
-CAREERS
+
+<b>CAREERS</b>
 Freelance, or sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Every promotion changes the work: convoy escorts and judgment calls, heists and protection rackets, close stellar passes, deep-core blasting. Fly company ships in your employer's colours, and earn one to keep.
 
-SHIPS AND OUTFITTING
+
+<b>SHIPS AND OUTFITTING</b>
 26 hulls from six shipyards, from the starter Wisp to the Imperator super-freighter. Hardpoints, utility mounts and optional slots; modules in classes 1–6 and marks Mk1–Mk5; a power budget to respect. Own a fleet and store ships at stations.
 
-EXPLORE AND LAND
+
+<b>EXPLORE AND LAND</b>
 Tune the resonance scanner onto hidden bodies, fire mapping probes at planets, then land on rocky, icy and metal-rich worlds. Drive a rover, sample alien plants on foot, and explore crash sites, settlements and ancient ruins.
 
-WALK THE STATIONS
+
+<b>WALK THE STATIONS</b>
 Dock and walk the concourse: market, shipyard, bar contacts with special contracts, and engineers who upgrade your modules. Buy a home — from a bunk pod to a penthouse — and arrange the furniture.
 
-MISSIONS
+
+<b>MISSIONS</b>
 Courier, delivery, mining, survey and assassination contracts, passenger charters and VIPs with demands, all tracked in the mission journal. An autopilot flies long routes for you, refuel stops included.
 
-SOUND
+
+<b>SOUND</b>
 About ninety minutes of recorded orchestral score that follows you from open space into combat and back home, plus an onboard computer voice and pirates who hail before they attack.
 
-ONE PURCHASE, THE WHOLE GAME
+
+<b>ONE PURCHASE, THE WHOLE GAME</b>
 • No ads, no in-app purchases, no account.
 • Touch controls, or plug in a gamepad or keyboard.
 • Optional cloud save carries your pilots between your devices.
+
 
 Made by Voidwake Studios, an independent studio.
 ```

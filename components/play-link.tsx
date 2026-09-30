@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { googlePlayUrl, mailto, site } from "@/lib/site";
+import { googlePlayUrl, mailto, notifyMailto, site } from "@/lib/site";
 
 type Variant = "solid" | "outline" | "ghost";
 
@@ -38,30 +38,21 @@ function SiteCta({
   );
 }
 
+/**
+ * The store button: Google Play once the listing is live, and until then a
+ * "notify me at launch" email. There is no free or web build to link to.
+ */
 export function PlayLink({
   className,
-  label = site.playLabel,
+  label,
   variant = "solid",
 }: SiteCtaProps) {
   return (
     <SiteCta
-      href={site.playUrl}
-      label={label}
-      variant={variant}
-      className={className}
-    />
-  );
-}
-
-export function SourceLink({
-  className,
-  label = site.sourceLabel,
-  variant = "ghost",
-}: SiteCtaProps) {
-  return (
-    <SiteCta
-      href={site.sourceUrl}
-      label={label}
+      href={site.googlePlayLive ? googlePlayUrl : notifyMailto}
+      label={
+        label ?? (site.googlePlayLive ? site.storeLabel : site.notifyLabel)
+      }
       variant={variant}
       className={className}
     />
@@ -80,28 +71,5 @@ export function ContactLink({
       variant={variant}
       className={className}
     />
-  );
-}
-
-/** The Android app on Google Play: a link once the listing is live, a note until then. */
-export function GooglePlayNote({ className }: { className?: string }) {
-  if (site.googlePlayLive) {
-    return (
-      <p className={cn("text-sm leading-relaxed", className)}>
-        <a
-          href={googlePlayUrl}
-          className="text-amber underline-offset-4 hover:underline"
-        >
-          Get {site.game} on Google Play
-        </a>
-      </p>
-    );
-  }
-  return (
-    <p
-      className={cn("text-muted-foreground text-sm leading-relaxed", className)}
-    >
-      The Android app is coming to Google Play.
-    </p>
   );
 }

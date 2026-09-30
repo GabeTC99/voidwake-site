@@ -20,9 +20,9 @@ export default function PrivacyPage() {
       intro={
         <>
           <p>
-            This policy covers {site.game} — the browser game, the Android app
-            and the Windows app — and this website, all made by {site.studio}{" "}
-            (&ldquo;we&rdquo;, &ldquo;us&rdquo;).
+            This policy covers {site.game} — the Android app and any future
+            versions for other stores — and this website, all made by{" "}
+            {site.studio} (&ldquo;we&rdquo;, &ldquo;us&rdquo;).
           </p>
           <p className="text-ice/80 mt-3 text-sm tracking-[0.04em]">
             Last updated {site.privacyUpdated}
@@ -35,7 +35,8 @@ export default function PrivacyPage() {
         <ul className="mt-3">
           <li>
             There are no accounts, no ads, no analytics, no tracking and no
-            in-app purchases.
+            in-app purchases. You buy the game once through the store, and the
+            store handles the payment.
           </li>
           <li>Your saves and settings are stored on your own device.</li>
           <li>
@@ -60,10 +61,10 @@ export default function PrivacyPage() {
       <h2 id="on-device">Data stored on your device</h2>
       <p>
         The game saves your progress (up to three pilots) and your settings —
-        volume, controls, graphics and similar options — in the local storage of
-        your browser or of the app. This data never leaves your device unless
-        you use cloud save or export a save file yourself. Clearing the
-        browser&apos;s site data, or uninstalling the app, deletes it.
+        volume, controls, graphics and similar options — in the app&apos;s own
+        storage. This data never leaves your device unless you use cloud save or
+        export a save file yourself. Uninstalling the app, or clearing its
+        storage in Android&apos;s settings, deletes it.
       </p>
       <p>
         On Android, the system&apos;s own backup (Google&apos;s Auto Backup) may
@@ -119,21 +120,15 @@ export default function PrivacyPage() {
           .
         </li>
         <li>
-          <strong>GitHub</strong> serves the browser version of the game (GitHub
-          Pages) and the Windows and Android download files (GitHub Releases).
-          GitHub may log visitor IP addresses for security; see the{" "}
-          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">
-            GitHub privacy statement
-          </a>
-          .
-        </li>
-        <li>
-          <strong>Google Play</strong> handles installing and updating the
-          Android app. Google&apos;s own{" "}
+          <strong>Google Play</strong> sells, installs and updates the Android
+          app, and Google&apos;s own{" "}
           <a href="https://policies.google.com/privacy">privacy policy</a>{" "}
-          applies to the Play Store; we receive only the aggregate, anonymous
-          install and crash statistics that Google Play Console gives every
-          developer.
+          applies to the Play Store. Google takes the payment; we never see your
+          card or payment details. For each purchase Google gives us an order
+          record (order number, date, price and your country and region), which
+          we use only for accounting, tax and refunds. We also see the
+          aggregate, anonymous install and crash statistics that Google Play
+          Console gives every developer.
         </li>
         <li>
           <strong>Device text-to-speech.</strong> If you pick &ldquo;Device
@@ -173,7 +168,7 @@ export default function PrivacyPage() {
       <ul>
         <li>
           <strong>On your device:</strong> delete a pilot with ✕ on the title
-          screen, clear the site data in your browser, or uninstall the app.
+          screen, clear the app&apos;s storage, or uninstall it.
         </li>
         <li>
           <strong>Cloud saves:</strong> <a href={privacyMailto}>email us</a>{" "}

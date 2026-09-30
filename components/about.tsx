@@ -1,9 +1,4 @@
-import {
-  ContactLink,
-  GooglePlayNote,
-  PlayLink,
-  SourceLink,
-} from "@/components/play-link";
+import { ContactLink, PlayLink } from "@/components/play-link";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -31,8 +26,8 @@ export function About() {
             want to play.
           </p>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            {site.game} is the flagship: a whole galaxy in a browser tab or on
-            your phone, with no account and no ads. Press, partnerships, bug
+            {site.game} is the flagship: a whole galaxy on your phone, with no
+            account, no ads and no in-app purchases. Press, partnerships, bug
             reports or just a trip report from the rim — the inbox is open.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -40,19 +35,20 @@ export function About() {
           </div>
         </div>
         <aside className="border-border bg-card sw-panel border p-7 shadow-[0_0_0_1px_rgba(0,0,0,.6),0_20px_60px_rgba(0,0,0,.6)] sm:p-8">
-          <p className="text-2xl leading-snug font-bold">Ready to launch?</p>
+          <p className="text-2xl leading-snug font-bold">
+            {site.googlePlayLive ? "Ready to launch?" : "Launching soon"}
+          </p>
           <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
-            The current build of {site.game} is live in the browser. Your Wisp
-            is fuelled and waiting at Sorensen Relay.
+            {site.googlePlayLive
+              ? `${site.game} is out now on Google Play. Your Wisp is fuelled and waiting at Sorensen Relay.`
+              : `${site.game} is coming to Google Play. Leave your email and we'll write once, the day it launches — no newsletter.`}
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <PlayLink className="w-full" />
-            <SourceLink className="w-full" />
           </div>
           <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-            {site.installNote}
+            {site.platformsNote}
           </p>
-          <GooglePlayNote className="mt-3" />
         </aside>
       </div>
     </section>

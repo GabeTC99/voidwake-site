@@ -40,12 +40,6 @@ export function SiteFooter() {
             >
               Contact
             </a>
-            <a
-              href={site.sourceUrl}
-              className="text-muted-foreground hover:text-foreground text-sm"
-            >
-              {site.sourceLabel}
-            </a>
           </nav>
           <p className="text-muted-foreground text-xs tracking-wide">
             © {new Date().getFullYear()} {site.studio}

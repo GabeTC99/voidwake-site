@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: `Help with ${site.game}: saves and cloud sync, controls, performance, the Android and Windows apps, bug reports and deleting your data.`,
+  description: `Help with ${site.game}: buying, saves and cloud sync, controls, performance, other platforms, bug reports and deleting your data.`,
   alternates: { canonical: "/support" },
 };
 
@@ -33,10 +33,14 @@ export default function SupportPage() {
         </>
       }
     >
-      <h2 id="cost">Does it cost anything?</h2>
+      <h2 id="buying">Buying {site.game}</h2>
       <p>
-        No. {site.game} is free in the browser, on Android and on Windows, with
-        no ads, no in-app purchases and no account.
+        {site.game} is a one-time purchase on Google Play: no ads, no in-app
+        purchases and no account. Google handles payment, and refunds follow{" "}
+        <a href="https://support.google.com/googleplay/answer/2479637">
+          Google Play&apos;s refund policy
+        </a>
+        . Reinstalling on the same Google account, or on a new phone, is free.
       </p>
 
       <h2 id="saves">Where are my saves?</h2>
@@ -78,13 +82,12 @@ export default function SupportPage() {
       <h2 id="performance">The game runs slowly</h2>
       <ul>
         <li>
-          Lower the graphics setting in the pause menu, and close other heavy
-          tabs or apps.
+          Lower the graphics setting in the pause menu, and close other apps
+          running in the background.
         </li>
         <li>
-          In a browser, make sure hardware acceleration is turned on — the game
-          detects software rendering and scales itself down, but it runs far
-          better on the GPU.
+          Turn off battery saver while you play: it slows the processor and caps
+          the frame rate.
         </li>
         <li>
           If it&apos;s still slow, turn on <em>Performance recorder</em> in the
@@ -93,21 +96,19 @@ export default function SupportPage() {
         </li>
       </ul>
 
-      <h2 id="apps">Android and Windows apps</h2>
+      <h2 id="platforms">Other platforms</h2>
       <p>
-        The apps run the same game as the browser version, so saves move between
-        them with cloud save or a save file. App updates arrive through the
-        store or a new installer rather than the in-game update button. The
-        Windows build isn&apos;t code-signed yet, so SmartScreen asks once
-        before the first launch.
+        {site.game} launches on Android first. Steam and itch.io versions are
+        planned; when they arrive, cloud save will carry your pilots across.
+        There is no iOS version yet.
       </p>
 
       <h2 id="bugs">Reporting a bug</h2>
       <p>
         <a href={supportMailto}>Email us</a> with what you were doing, what you
-        expected and what happened instead, plus the device and browser or app
-        you play on. A screenshot, an exported save file or a performance log
-        helps a lot.
+        expected and what happened instead, plus your phone model and Android
+        version. A screenshot, an exported save file or a performance log helps
+        a lot.
       </p>
 
       <h2 id="delete-data">Deleting your data</h2>

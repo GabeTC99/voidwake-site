@@ -1,8 +1,9 @@
 /**
  * Voidwake Studios — site copy and links.
  *
- * `playUrl` is the live GitHub Pages build of Starwake. It installs as a PWA
- * (Add to Home Screen / Install app) on Android, iOS and desktop.
+ * Starwake is a paid game sold on Google Play; there is no free or web build.
+ * Until `googlePlayLive` is true, every store button asks to be notified at
+ * launch (a mailto) instead of linking to the unpublished listing.
  * `contactEmail` is the single studio inbox behind every mailto link; the
  * address is not printed on the page.
  * Screenshot filenames live in `screenshots` — drop matching files in
@@ -16,15 +17,13 @@ export const site = {
   kicker: "a 2D space frontier",
   tagline: "Trade, fight and chart your way across a million stars.",
   description:
-    "Starwake is a 2D space frontier for the browser and Android: trade between stations, mine asteroid rings, hunt pirate aces, sign on for a career, land on planets, walk stations and explore a spiral galaxy of about a million star systems.",
-  playUrl: "https://gabetc99.github.io/Starwake/",
-  playLabel: "Play Starwake",
+    "Starwake is a 2D space frontier for Android: trade between stations, mine asteroid rings, hunt pirate aces, sign on for a career, land on planets, walk stations and explore a spiral galaxy of about a million star systems.",
+  storeLabel: "Get it on Google Play",
+  notifyLabel: "Notify me at launch",
   heroCtaNote:
-    "Free in your browser · Keyboard, mouse, touch and gamepad · Installs as an app · No login",
-  installNote:
-    "On a phone, open the game and choose Add to Home Screen to play it full-screen and offline.",
-  sourceUrl: "https://github.com/GabeTC99/Starwake",
-  sourceLabel: "Source on GitHub",
+    "Coming soon to Google Play · Touch, gamepad or keyboard · One purchase: no ads, no in-app purchases",
+  platformsNote:
+    "Android first, on Google Play. Steam and itch.io versions are planned.",
   contactEmail: "gabe@voidwakestudios.com",
   contactLabel: "Email the studio",
   siteUrl: "https://www.voidwakestudios.com",
@@ -39,6 +38,10 @@ export const googlePlayUrl = `https://play.google.com/store/apps/details?id=${si
 
 export const mailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
   `${site.game} — hello from the site`,
+)}`;
+
+export const notifyMailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
+  `Tell me when ${site.game} launches`,
 )}`;
 
 // Root-relative so the header and footer work from /privacy and /support too.
@@ -120,8 +123,8 @@ export const features = [
   },
   {
     id: "platforms",
-    title: "Browser, Android & Windows",
-    body: "Play free in any modern browser, or install it as an app. Keyboard and mouse, touch or gamepad. No account and no ads — an optional sync code carries your pilots between devices, and an autopilot handles the long hauls.",
+    title: "Made for your phone",
+    body: "Built for touch, with full gamepad and keyboard support. One purchase: no ads, no in-app purchases, no account. An optional sync code carries your pilots between devices, and an autopilot handles the long hauls.",
   },
 ] as const;
 

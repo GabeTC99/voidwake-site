@@ -28,7 +28,7 @@ Starwake: Space Frontier
 **Short description** (80 max)
 
 ```
-Trade, fight and chart your way across a million-star galaxy. No ads, no IAP.
+Trade, fight and chart your way across a million-star galaxy. No ads or IAP.
 ```
 
 **Full description** (4,000 max; about 2,600 here)
@@ -62,10 +62,10 @@ Courier, delivery, mining, survey and assassination contracts, passenger charter
 SOUND
 About ninety minutes of recorded orchestral score that follows you from open space into combat and back home, plus an onboard computer voice and pirates who hail before they attack.
 
-FAIR TO PLAY
-• Free. No ads, no in-app purchases, no account.
+ONE PURCHASE, THE WHOLE GAME
+• No ads, no in-app purchases, no account.
 • Touch controls, or plug in a gamepad or keyboard.
-• Optional cloud save carries your pilots between your phone, the browser version and Windows.
+• Optional cloud save carries your pilots between your devices.
 
 Made by Voidwake Studios, an independent studio.
 ```
@@ -80,6 +80,30 @@ Made by Voidwake Studios, an independent studio.
 | Feature graphic | 1024 × 500 JPG/PNG, no alpha | `docs/google-play/feature-graphic.png` |
 | Phone screenshots | 2–8, 16:9 or 9:16, 320–3840 px per side | `public/screenshots/*.jpg` (1920 × 1080). Phone captures from the Android app are better if you can take them. |
 | 7" / 10" tablet screenshots | optional, needed for the tablet shelf | the same set works |
+
+## Pricing (paid app)
+
+- Set up a **payments profile** in Play Console (Settings → Payments profile) before you can set a price.
+- Set the price under *Monetize → Products → App pricing*. Play converts it to local prices per country.
+- **A paid app can never be made free and then paid again** — once free on Play, always free. Going
+  from paid to free later is allowed.
+- Answer "No" to in-app products and ads; the listing then shows "Contains no ads".
+- Consider turning on **Play Integrity / automatic protection** (*Release → App integrity*) to make
+  side-loaded copies of the APK refuse to run. It deters casual sharing; it won't stop a determined
+  pirate, since the game is web files inside the app.
+
+## Keeping it paid: no free copies
+
+Starwake used to be public on GitHub with a free web build. Before launch:
+
+1. Make `GabeTC99/Starwake` **private** (Settings → General → Danger zone → Change visibility).
+   It had no forks, so no public copy of the repository remains. Releases become private with it.
+2. **Unpublish GitHub Pages** (Settings → Pages). The Pages workflow has already been removed from
+   the game repo. The game's service worker is network-first, so an installed web copy stops working
+   the next time it loads online and gets the 404.
+3. Optionally delete the old `android-build-*` / `windows-build-*` pre-releases.
+4. The repository has a `LICENSE` stating all rights are reserved, so anyone re-uploading an old copy
+   can be sent a DMCA takedown (Play Console also has a copyright complaint form).
 
 ## Data safety form
 
@@ -102,6 +126,8 @@ Based on what the Android app actually does (see the game's `js/22-cloud.js` and
 ## Other Play Console sections
 
 - **Ads:** No, the app does not contain ads.
+- **Financial info (Data safety):** payments go through Google Play billing, which Google declares; the
+  app itself collects no financial info.
 - **App access:** All functionality is available without special access (no login).
 - **Content rating (IARC questionnaire):** Violence — yes, fantasy violence between spaceships and
   against drones, no blood or gore, no humans harmed on screen. Crime themes — smuggling, bribery and

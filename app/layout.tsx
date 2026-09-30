@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     "Starwake",
     "Voidwake Studios",
     "space game",
-    "browser game",
+    "Android game",
     "space trading",
     "exploration",
     "indie game",
-    "PWA",
+    "Google Play",
   ],
   icons: {
     icon: [

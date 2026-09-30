@@ -113,9 +113,10 @@ Based on what the Android app actually does (see the game's `js/22-cloud.js` and
 - **Does your app collect or share any of the required user data types?** Yes (cloud save only).
 - **Is all of the user data collected by your app encrypted in transit?** Yes (HTTPS).
 - **Do you provide a way for users to request that their data is deleted?** Yes — link above.
+- **Account creation:** "My app does not allow users to create an account" (the sync code is not an account).
 - **Data types collected:**
-  - *App activity → Other user-generated content* (the save file and its summary: system, credits, ship,
-    play time, device type). Collected, **not shared**, **optional** (only when the player turns on cloud
+  - *App activity → Other actions* (Google's definition names "gameplay"): the save file and its summary
+    (system, credits, ship, play time, device type). Collected, **not shared**, **optional** (only when the player turns on cloud
     save), **not processed ephemerally**. Purpose: **App functionality**.
 - Nothing else: no location, personal info, contacts, identifiers, financial info, health, messages,
   photos, audio, files, calendar, web history or crash/diagnostics data leaves the device.

@@ -28,7 +28,7 @@ export const site = {
   contactLabel: "Email the studio",
   siteUrl: "https://www.voidwakestudios.com",
   // Android package name, as registered in Google Play Console.
-  androidPackage: "io.github.gabetc99.starwake",
+  androidPackage: "com.voidwakestudios.starwake",
   // Flip to true once the Play listing is published; until then the site says "coming soon".
   googlePlayLive: false,
   privacyUpdated: "30 September 2026",

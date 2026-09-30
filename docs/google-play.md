@@ -12,10 +12,10 @@ Everything the Play Console asks for, ready to paste. Keep this in step with the
 | Support / contact page | https://www.voidwakestudios.com/support |
 | Delete data (Data safety → "provide a link") | https://www.voidwakestudios.com/privacy#delete-data |
 | Contact email | the studio inbox in `lib/site.ts` → `contactEmail` (Play shows it publicly) |
-| Package name | `io.github.gabetc99.starwake` |
+| Package name | `com.voidwakestudios.starwake` |
 
 After the listing is published, set `googlePlayLive: true` in `lib/site.ts`: the site then links to
-`https://play.google.com/store/apps/details?id=io.github.gabetc99.starwake` instead of saying "coming soon".
+`https://play.google.com/store/apps/details?id=com.voidwakestudios.starwake` instead of saying "coming soon".
 
 ## Store listing
 

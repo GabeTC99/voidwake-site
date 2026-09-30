@@ -1,5 +1,5 @@
 import { Wordmark } from "@/components/wordmark";
-import { mailto, nav, site } from "@/lib/site";
+import { legalNav, mailto, nav, site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -14,7 +14,18 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:gap-10">
           <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2">
-            {nav.map((item) => (
+            {nav
+              .filter((item) => item.href !== "/support")
+              .map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground text-sm"
+                >
+                  {item.label}
+                </a>
+              ))}
+            {legalNav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -28,12 +39,6 @@ export function SiteFooter() {
               className="text-muted-foreground hover:text-foreground text-sm"
             >
               Contact
-            </a>
-            <a
-              href={site.sourceUrl}
-              className="text-muted-foreground hover:text-foreground text-sm"
-            >
-              {site.sourceLabel}
             </a>
           </nav>
           <p className="text-muted-foreground text-xs tracking-wide">

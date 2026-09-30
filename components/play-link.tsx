@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { mailto, site } from "@/lib/site";
+import { googlePlayUrl, mailto, notifyMailto, site } from "@/lib/site";
 
 type Variant = "solid" | "outline" | "ghost";
 
@@ -30,7 +30,7 @@ function SiteCta({
       className={cn(
         "sw-btn focus-visible:outline-ice inline-flex h-11 shrink-0 items-center justify-center border px-5 text-[0.95rem] font-semibold tracking-[0.04em] whitespace-nowrap transition-colors focus-visible:outline-2 focus-visible:outline-offset-2",
         variants[variant],
-        className
+        className,
       )}
     >
       {label}
@@ -38,30 +38,21 @@ function SiteCta({
   );
 }
 
+/**
+ * The store button: Google Play once the listing is live, and until then a
+ * "notify me at launch" email. There is no free or web build to link to.
+ */
 export function PlayLink({
   className,
-  label = site.playLabel,
+  label,
   variant = "solid",
 }: SiteCtaProps) {
   return (
     <SiteCta
-      href={site.playUrl}
-      label={label}
-      variant={variant}
-      className={className}
-    />
-  );
-}
-
-export function SourceLink({
-  className,
-  label = site.sourceLabel,
-  variant = "ghost",
-}: SiteCtaProps) {
-  return (
-    <SiteCta
-      href={site.sourceUrl}
-      label={label}
+      href={site.googlePlayLive ? googlePlayUrl : notifyMailto}
+      label={
+        label ?? (site.googlePlayLive ? site.storeLabel : site.notifyLabel)
+      }
       variant={variant}
       className={className}
     />

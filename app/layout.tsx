@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.siteUrl),
   title: {
     default: `${site.game} — ${site.studio}`,
     template: `%s — ${site.studio}`,
@@ -27,11 +28,11 @@ export const metadata: Metadata = {
     "Starwake",
     "Voidwake Studios",
     "space game",
-    "browser game",
+    "Android game",
     "space trading",
     "exploration",
     "indie game",
-    "PWA",
+    "Google Play",
   ],
   icons: {
     icon: [

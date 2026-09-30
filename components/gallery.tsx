@@ -20,9 +20,9 @@ export function Gallery() {
             From the cockpit, the concourse and the dirt.
           </h2>
           <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-            Captured from the current build — launch, the galaxy map, the
-            station concourse, the shipyard, careers, a home of your own and
-            a low pass over a rocky world.
+            Captured from the current build — a dogfight above Solace IV, the
+            galaxy map, the station concourse, the shipyard, careers, a home
+            of your own and a low pass over a crash site.
           </p>
         </div>
 

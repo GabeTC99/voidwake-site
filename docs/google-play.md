@@ -19,6 +19,8 @@ After the listing is published, set `googlePlayLive: true` in `lib/site.ts`: the
 
 ## Store listing
 
+Plain-text copies for pasting: `docs/google-play/short-description.txt` and `full-description.txt`.
+
 **App name** (30 max)
 
 ```
@@ -76,9 +78,9 @@ Made by Voidwake Studios, an independent studio.
 
 | Asset | Spec | Source |
 | --- | --- | --- |
-| App icon | 512 × 512 PNG, 32-bit | `public/icon-512.png` here, or `icons/` in the game repo |
+| App icon | 512 × 512 PNG | `docs/google-play/app-icon-512.png` (the game's own `icons/icon-512.png`) |
 | Feature graphic | 1024 × 500 JPG/PNG, no alpha | `docs/google-play/feature-graphic.png` |
-| Phone screenshots | 2–8, 16:9 or 9:16, 320–3840 px per side | `public/screenshots/*.jpg` (1920 × 1080). Phone captures from the Android app are better if you can take them. |
+| Phone screenshots | 2–8, 16:9 or 9:16, 320–3840 px per side | `docs/google-play/phone-screenshots/` — seven 1920 × 1080 landscape captures with the touch controls, made by `PHONE=1 node tools/site-shots.mjs` in the game repo |
 | 7" / 10" tablet screenshots | optional, needed for the tablet shelf | the same set works |
 
 ## Pricing (paid app)

@@ -132,38 +132,38 @@ export const screenshots = [
   {
     id: "flight",
     title: "Flight",
-    caption: "Launching from Sorensen Relay in the Solace system.",
+    caption: "A pirate Harrier jumps you above Solace IV, and the police come in with lights on.",
     featured: true,
   },
   {
     id: "galaxy-map",
     title: "Galaxy map",
-    caption: "Solace at the heart of the home systems, routes plotted by A*.",
+    caption: "Solace at the heart of the home systems, a million more stars beyond.",
   },
   {
     id: "stations",
     title: "Stations",
-    caption: "Walk the concourse from the hangar to the market and bar.",
+    caption: "Walk from the hangar past the market to the bar and the Cartographic Guild.",
   },
   {
     id: "shipyard",
     title: "Shipyard",
-    caption: "Twenty-six hulls, each with its own slots and stock loadout.",
+    caption: "Combat hulls from Kessler Armaments and Aurelian Works, side by side.",
   },
   {
     id: "careers",
     title: "Careers",
-    caption: "Five employers, five grades, and company ships on shift.",
+    caption: "Sign on with faction Security or a freight line, and climb five grades.",
   },
   {
     id: "housing",
     title: "Housing",
-    caption: "A furnished penthouse with the station's planet out the window.",
+    caption: "A furnished suite, the planet out the window, and a bar contact dropping by.",
   },
   {
     id: "planetary-expedition",
     title: "Planetary landing",
-    caption: "Flying low over a rocky world before touchdown.",
+    caption: "Flying low over a crash site on Solace IV, looking for somewhere to set down.",
   },
 ] as const;
 

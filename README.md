@@ -9,6 +9,8 @@ npm run dev
 
 Dev server: http://127.0.0.1:43127
 
+New machine? See [`docs/NEW-PC-SETUP.md`](docs/NEW-PC-SETUP.md): install Git and Node 22, clone, then run `scripts/setup.ps1` (Windows) or `scripts/setup.sh`.
+
 ## Deploy on Vercel
 
 1. Import [GabeTC99/voidwake-site](https://github.com/GabeTC99/voidwake-site) (branch `main`).

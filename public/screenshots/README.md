@@ -6,11 +6,12 @@ Drop production captures here. The gallery looks for these filenames, in this or
 | --- | --- |
 | Flight (featured) | `flight.jpg`, `flight.jpeg`, `flight.webp`, `flight.png`, then `flight.svg` |
 | Galaxy map | `galaxy-map.jpg` (same extension order) |
-| Stations | `stations.jpg` |
+| Life on the concourse | `station-life.png` |
 | Shipyard | `shipyard.jpg` |
 | Careers | `careers.jpg` |
 | Housing | `housing.jpg` |
 | Planetary landing | `planetary-expedition.jpg` |
+| Out of the cockpit | `surface-on-foot.png` |
 
 ## Specs
 
@@ -19,7 +20,7 @@ Drop production captures here. The gallery looks for these filenames, in this or
 - Color: dark captures read best against the site's void background
 - No need to edit code if you use the names above — the page picks up the image on refresh
 
-The current set is 1600×1000 JPEGs captured from the current Starwake build by the game repo's `tools/site-shots.mjs`, which drives the game in headless Chromium and writes all seven files:
+The original 1600×1000 JPEG set was captured by the game repo's `tools/site-shots.mjs`, which writes the seven original files, including `stations.jpg`:
 
 ```sh
 # in the Starwake repo
@@ -27,5 +28,7 @@ node tools/site-shots.mjs ../voidwake-site/public/screenshots
 ```
 
 Traffic is random, so each run differs a little; look the frames over before committing. Replacing a file with the same name is enough — no code change required.
+
+`station-life.png` and `surface-on-foot.png` are 1280×800 gameplay captures from the game's 10 October 2026 character-animation checks (`test-results/character-animation/concourse-walk.png` and `surface-walk.png`). The concourse image also appears in the latest-features showcase. Replace these separately when refreshing the gallery; the original seven-shot script does not produce them.
 
 The slot list itself lives in `lib/site.ts` (`screenshots`).

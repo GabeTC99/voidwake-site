@@ -30,18 +30,16 @@ export function Hero() {
             {site.tagline}
           </p>
           <p className="text-muted-foreground mt-4 max-w-xl text-base leading-relaxed sm:text-[1.0625rem]">
-            Trade between stations, mine asteroid rings, answer distress calls
-            and hunt pirate aces for bounties — or jump out past the charted
-            systems and sell what you find to the Cartographic Guild.
+            {site.heroBody}
           </p>
           <div className="mt-8 flex flex-col gap-3">
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <PlayLink />
               <a
-                href="#features"
+                href="#whats-new"
                 className="text-muted-foreground hover:text-amber px-1 text-sm underline-offset-4 hover:underline"
               >
-                What you can do
+                {site.heroSecondaryLabel}
               </a>
             </div>
             <p className="text-ice/80 max-w-2xl text-xs tracking-[0.06em]">

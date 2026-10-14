@@ -15,7 +15,7 @@ export function SiteHeader() {
     <header className="border-border/70 bg-void/75 sticky top-0 z-40 border-b backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Wordmark />
-        <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-5 lg:flex">
           {nav.map((item) => (
             <a
               key={item.href}
@@ -32,7 +32,7 @@ export function SiteHeader() {
             type="button"
             className={cn(
               buttonVariants({ variant: "ghost", size: "icon" }),
-              "md:hidden"
+              "lg:hidden"
             )}
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -49,7 +49,7 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-border/70 bg-void/95 border-t px-4 py-4 md:hidden"
+          className="border-border/70 bg-void/95 border-t px-4 py-4 lg:hidden"
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-3">
             {nav.map((item) => (

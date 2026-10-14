@@ -111,6 +111,10 @@
     background-color: var(--void);
   }
 
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply text-foreground font-sans antialiased;
     background-color: var(--void);
@@ -130,6 +134,31 @@
     font-weight: 700;
     letter-spacing: -0.01em;
   }
+}
+
+.character-sprite {
+  --sprite-size: clamp(64px, 8vw, 100px);
+  width: var(--sprite-size);
+  height: var(--sprite-size);
+  background-repeat: no-repeat;
+  background-size: calc(var(--sprite-size) * 8) calc(var(--sprite-size) * var(--sprite-rows));
+  background-position: 0 calc(var(--sprite-size) * var(--sprite-start-row) * -1);
+}
+
+.character-sprite.is-playing {
+  animation:
+    character-walk-columns 0.4s steps(8, end) infinite,
+    character-walk-rows 1.2s steps(3, end) infinite;
+}
+
+@keyframes character-walk-columns {
+  from { background-position-x: 0; }
+  to { background-position-x: calc(var(--sprite-size) * -8); }
+}
+
+@keyframes character-walk-rows {
+  from { background-position-y: calc(var(--sprite-size) * var(--sprite-start-row) * -1); }
+  to { background-position-y: calc(var(--sprite-size) * (var(--sprite-start-row) + 3) * -1); }
 }
 
 @media (prefers-reduced-motion: reduce) {

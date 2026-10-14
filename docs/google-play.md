@@ -33,7 +33,7 @@ Starwake: Space Frontier
 Trade, fight and chart your way across a million-star galaxy. No ads or IAP.
 ```
 
-**Full description** (4,000 max; about 2,700 here). Blank lines separate the sections and ★ marks the headings. Plain text on purpose: Play Console's review summary shows HTML tags literally.
+**Full description** (4,000 max). Blank lines separate the sections and ★ marks the headings. Plain text on purpose: Play Console's review summary shows HTML tags literally.
 
 ```
 Starwake is a 2D space frontier: a whole spiral galaxy of about a million star systems, with work to do in every one of them.
@@ -62,7 +62,7 @@ Tune the resonance scanner onto hidden bodies, fire mapping probes at planets, t
 
 
 ★ WALK THE STATIONS
-Dock and walk the concourse: market, shipyard, bar contacts with special contracts, and engineers who upgrade your modules. Buy a home — from a bunk pod to a penthouse — and arrange the furniture.
+Dock and walk the concourse: market, shipyard, bar contacts with special contracts, and engineers who upgrade your modules. Buy a home — from a bunk pod to a penthouse — and arrange the furniture. All 18 on-foot characters animate with their original artwork, bringing walking, running and idle poses to stations, homes and planet surfaces.
 
 
 ★ MISSIONS
@@ -75,7 +75,8 @@ About ninety minutes of recorded orchestral score that follows you from open spa
 
 ★ ONE PURCHASE, THE WHOLE GAME
 • No ads, no in-app purchases, no account.
-• Touch controls, or plug in a gamepad or keyboard.
+• Touch controls, or plug in a gamepad or keyboard. Target and Chase sit beside Fire, with larger flight and map controls.
+• Sharp graphics mode keeps HUD text and station interiors crisp at your screen's full pixel density.
 • Optional cloud save carries your pilots between your devices.
 
 

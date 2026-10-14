@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { resolveScreenshotSrc } from "@/lib/screenshots";
 import { site } from "@/lib/site";
 
@@ -23,12 +24,12 @@ export function ScreenshotFrame({
           featured ? "aspect-[16/9]" : "aspect-[16/10]"
         }`}
       >
-        {/* Local public files; see public/screenshots/README.md. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={src}
           alt={`${site.game} ${title} — ${caption}`}
-          className="h-full w-full object-cover"
+          fill
+          sizes={featured ? "(min-width: 1152px) 1104px, 100vw" : "(min-width: 768px) 552px, 100vw"}
+          className="object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         <div className="border-amber/60 pointer-events-none absolute top-3 left-3 size-5 border-t border-l" />

@@ -17,7 +17,10 @@ export const site = {
   kicker: "a 2D space frontier",
   tagline: "Trade, fight and chart your way across a million stars.",
   description:
-    "Starwake is a 2D space frontier for Android: trade between stations, mine asteroid rings, hunt pirate aces, sign on for a career, land on planets, walk stations and explore a spiral galaxy of about a million star systems.",
+    "Starwake is a 2D space frontier for Android: trade, fight and explore a million star systems, then step out into stations and onto planets with animated characters and controls built for touch.",
+  heroBody:
+    "Trade between stations, mine asteroid rings and hunt pirate aces — then leave the cockpit. Walk a lively concourse, make a home among the stars or set foot on an uncharted world.",
+  heroSecondaryLabel: "See what's new",
   storeLabel: "Get it on Google Play",
   notifyLabel: "Notify me at launch",
   heroCtaNote:
@@ -47,6 +50,7 @@ export const notifyMailto = `mailto:${site.contactEmail}?subject=${encodeURIComp
 // Root-relative so the header and footer work from /privacy and /support too.
 export const nav = [
   { href: "/#starwake", label: "Starwake" },
+  { href: "/#whats-new", label: "What's new" },
   { href: "/#features", label: "Features" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/#studio", label: "Studio" },
@@ -64,6 +68,56 @@ export const stats = [
   { value: "26", label: "Hulls from six shipyards" },
   { value: "6", label: "Factions with territory" },
 ] as const;
+
+export const featureShowcase = {
+  eyebrow: "What's new in the current build",
+  title: "A livelier frontier. A clearer view.",
+  body: "Original characters in motion, more control in a dogfight and sharper detail on your phone. Take a look at the latest additions to Starwake as we prepare for launch.",
+  browseLabel: "Explore all features",
+  animation: {
+    eyebrow: "01 / Life on foot",
+    title: "Step out. The frontier is moving.",
+    body: "All 18 on-foot characters now animate using their original artwork. Walk, run and idle in the station concourse, at home and on planet surfaces — from your pilot and surface suit to the people you meet along the way.",
+    image: {
+      src: "/screenshots/station-life.png",
+      alt: "Starwake's station concourse with the orange-suited pilot, station staff and visitors between the market, mission board and bar.",
+      width: 1280,
+      height: 800,
+    },
+  },
+  improvements: [
+    {
+      id: "controls",
+      eyebrow: "02 / Built for touch",
+      title: "Keep your target. Take the shot.",
+      body: "Target and Chase sit beside Fire. Let Chase follow and aim at your target while you handle the weapons. Larger flight and map controls make the next move easier to tap.",
+      detail: "Target · Chase · Fire",
+    },
+    {
+      id: "graphics",
+      eyebrow: "03 / A sharper frontier",
+      title: "See the detail, from orbit to the concourse.",
+      body: "Sharp graphics mode uses your screen's full pixel density, keeping HUD text and station interiors crisp. Phone menus stay within the screen even when a larger system font is selected.",
+      detail: "Sharp graphics · Clearer phone menus",
+    },
+  ],
+} as const;
+
+export const characterPreview = {
+  label: "Original in-game artwork",
+  note: "Walk cycles taken directly from Starwake.",
+  playLabel: "Play animation",
+  pauseLabel: "Pause animation",
+  characters: [
+    { id: "pilot", label: "Pilot", src: "/characters/pilot-animated.webp?v=c4baf07c8005", fallbackSrc: "/characters/pilot.webp", rows: 8, startRow: 2 },
+    { id: "astronaut", label: "Surface suit", src: "/characters/astronaut-animated.webp?v=c4baf07c8005", fallbackSrc: "/characters/astronaut.webp", rows: 8, startRow: 2 },
+    { id: "security", label: "Security", src: "/characters/security-animated.webp?v=c4baf07c8005", fallbackSrc: "/characters/security.webp", rows: 4, startRow: 1 },
+  ],
+} as const;
+
+export const galleryCopy = {
+  body: "Gameplay from Starwake: combat above Solace IV, the galaxy map, careers, a home of your own and planetary exploration. The latest concourse and on-foot captures show the original character artwork in the game.",
+} as const;
 
 export const features = [
   {
@@ -114,7 +168,7 @@ export const features = [
   {
     id: "landings",
     title: "Land, drive & walk",
-    body: "Set down on rocky, icy and metal-rich worlds, deploy a rover, sample alien plants on foot. Dock and walk the concourse — market, shipyard, bar and engineers who upgrade modules with what you gathered.",
+    body: "Set down on rocky, icy and metal-rich worlds, deploy a rover and sample alien plants on foot. Explore crash sites, settlements, geyser fields and ancient ruins guarded by sentinel drones. Back at the station, walk the concourse and meet engineers who upgrade your modules.",
   },
   {
     id: "sound",
@@ -141,9 +195,9 @@ export const screenshots = [
     caption: "Solace at the heart of the home systems, a million more stars beyond.",
   },
   {
-    id: "stations",
-    title: "Stations",
-    caption: "Walk from the hangar past the market to the bar and the Cartographic Guild.",
+    id: "station-life",
+    title: "Life on the concourse",
+    caption: "Your pilot, station staff and visitors share the concourse, all using the original character artwork.",
   },
   {
     id: "shipyard",
@@ -164,6 +218,11 @@ export const screenshots = [
     id: "planetary-expedition",
     title: "Planetary landing",
     caption: "Flying low over a crash site on Solace IV, looking for somewhere to set down.",
+  },
+  {
+    id: "surface-on-foot",
+    title: "Out of the cockpit",
+    caption: "Suit up and step onto Solace IV, with your ship waiting nearby.",
   },
 ] as const;
 

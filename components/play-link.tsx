@@ -39,8 +39,8 @@ function SiteCta({
 }
 
 /**
- * The store button: Google Play once the listing is live, and until then a
- * "notify me at launch" email. There is no free or web build to link to.
+ * Join the early access program from the Google Play store listing.
+ * Keep the notification fallback until public availability is confirmed.
  */
 export function PlayLink({
   className,

@@ -1,3 +1,6 @@
+Paid early access: Starwake is still in development. Features, balance and presentation may change as we improve the game. Please send feedback and bug reports to gabe@voidwakestudios.com.
+
+
 Starwake is a 2D space frontier: a whole spiral galaxy of about a million star systems, with work to do in every one of them.
 
 
@@ -12,7 +15,7 @@ Start in a little Wisp at Sorensen Relay. Run cargo between stations, strip aste
 
 
 ★ CAREERS
-Freelance, or sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Every promotion changes the work: convoy escorts and judgment calls, heists and protection rackets, close stellar passes, deep-core blasting. Fly company ships in your employer's colours, and earn one to keep.
+Freelance, or apply at a staffed Security, freight, Syndicate, research or mining office. Train with an instructor, qualify and choose your first paid posting. Across five careers, 26 core practicals and 16 optional field lessons teach the work. Every promotion changes the duties: convoy escorts, heists, close stellar passes and deep-core blasting. Fly company ships in your employer's colours, and earn one to keep.
 
 
 ★ SHIPS AND OUTFITTING
@@ -35,7 +38,7 @@ Courier, delivery, mining, survey and assassination contracts, passenger charter
 About ninety minutes of recorded orchestral score that follows you from open space into combat and back home, plus an onboard computer voice and pirates who hail before they attack.
 
 
-★ ONE PURCHASE, THE WHOLE GAME
+★ ONE PURCHASE
 • No ads, no in-app purchases, no account.
 • Touch controls, or plug in a gamepad or keyboard. Target and Chase sit beside Fire, with larger flight and map controls.
 • Sharp graphics mode keeps HUD text and station interiors crisp at your screen's full pixel density.

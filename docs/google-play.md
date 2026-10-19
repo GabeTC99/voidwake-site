@@ -17,12 +17,11 @@ Everything the Play Console asks for, ready to paste. Keep this in step with the
 
 Starwake uses Play Console's dedicated **Early Access** track. The Console allows anyone to join the
 program from the store listing; enrollment and purchase happen there. The website's shared buttons
-will say "Join early access" and use that same listing URL.
+say "Join early access" and use that same listing URL.
 
-**Review is pending:** keep `googlePlayLive: false` in `lib/site.ts`, with notification buttons and
-coming-soon copy. The live labels and instructions are prepared behind that flag. Do not activate it,
-merge the launch branch or deploy this change until Google review is complete and public availability
-has been confirmed. Submitting a release for review does not make the game public.
+**Public early access is live:** the studio confirmed availability on 19 October 2026.
+`googlePlayLive: true` in `lib/site.ts` activates the store buttons and early-access availability
+copy across the site. Early access is paid and the game is still in development.
 
 ## Store listing
 

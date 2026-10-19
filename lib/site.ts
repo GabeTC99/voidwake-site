@@ -3,7 +3,7 @@
  *
  * Starwake is a paid game sold on Google Play; there is no free or web build.
  * Early-access enrollment happens on the Google Play store listing.
- * Keep `googlePlayLive` false until the release is publicly available.
+ * The paid early-access release is publicly available on Google Play.
  * `contactEmail` is the single studio inbox behind every mailto link; the
  * address is not printed on the page.
  * Screenshot filenames live in `screenshots` — drop matching files in
@@ -17,14 +17,14 @@ export const site = {
   kicker: "a 2D space frontier",
   tagline: "Trade, fight and chart your way across a million stars.",
   description:
-    "Starwake is a paid early-access space frontier for Android: trade, fight and explore a million star systems, then step out into stations and onto planets with animated characters and controls built for touch.",
+    "Starwake is out now in paid early access on Google Play for Android. Trade, fight and explore a million star systems, then step out into stations and onto planets with animated characters and controls built for touch.",
   heroBody:
     "Trade between stations, mine asteroid rings and hunt pirate aces — then leave the cockpit. Walk a lively concourse, make a home among the stars or set foot on an uncharted world.",
   heroSecondaryLabel: "See what's new",
   storeLabel: "Join early access",
   notifyLabel: "Notify me at launch",
   heroCtaNote:
-    "Paid early access on Google Play · Still in development · One purchase: no ads, no in-app purchases",
+    "Out now in paid early access on Google Play · Still in development · One purchase: no ads, no in-app purchases",
   heroPendingCtaNote:
     "Paid early access coming to Google Play · Still in development · One purchase: no ads, no in-app purchases",
   earlyAccessTitle: "Join the frontier in early access",
@@ -44,8 +44,8 @@ export const site = {
   siteUrl: "https://www.voidwakestudios.com",
   // Android package name, as registered in Google Play Console.
   androidPackage: "com.voidwakestudios.starwake",
-  // Google review is pending. Activate only after public availability is confirmed.
-  googlePlayLive: false,
+  // Public early-access availability confirmed by the studio on 19 October 2026.
+  googlePlayLive: true,
   privacyUpdated: "30 September 2026",
 } as const;
 

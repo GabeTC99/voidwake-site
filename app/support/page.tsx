@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage } from "@/components/doc-page";
 import { ContactLink, PlayLink } from "@/components/play-link";
-import { site } from "@/lib/site";
+import { googlePlayUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -34,6 +34,22 @@ export default function SupportPage() {
       }
     >
       <h2 id="buying">Buying {site.game}</h2>
+      {site.googlePlayLive ? (
+        <p>
+          {site.game} is available in paid early access. Join the early access
+          program from its <a href={googlePlayUrl}>Google Play store listing</a>.
+          Google Play handles enrollment and purchase on the listing.
+        </p>
+      ) : (
+        <p>
+          {site.game}&apos;s paid early access release is awaiting Google Play
+          review. Use Notify me at launch above to hear when it becomes available.
+        </p>
+      )}
+      <p>
+        Early access is still in development. Feedback and bug reports are
+        welcome through <a href={supportMailto}>email support</a>.
+      </p>
       <p>
         {site.game} is a one-time purchase on Google Play: no ads, no in-app
         purchases and no account. Google handles payment, and refunds follow{" "}
@@ -98,8 +114,8 @@ export default function SupportPage() {
 
       <h2 id="platforms">Other platforms</h2>
       <p>
-        {site.game} launches on Android first. Steam and itch.io versions are
-        planned; when they arrive, cloud save will carry your pilots across.
+        {site.platformsNote} When the other versions arrive, cloud save will
+        carry your pilots across.
         There is no iOS version yet.
       </p>
 

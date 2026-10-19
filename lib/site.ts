@@ -2,8 +2,8 @@
  * Voidwake Studios — site copy and links.
  *
  * Starwake is a paid game sold on Google Play; there is no free or web build.
- * Until `googlePlayLive` is true, every store button asks to be notified at
- * launch (a mailto) instead of linking to the unpublished listing.
+ * Early-access enrollment happens on the Google Play store listing.
+ * The paid early-access release is publicly available on Google Play.
  * `contactEmail` is the single studio inbox behind every mailto link; the
  * address is not printed on the page.
  * Screenshot filenames live in `screenshots` — drop matching files in
@@ -17,23 +17,35 @@ export const site = {
   kicker: "a 2D space frontier",
   tagline: "Trade, fight and chart your way across a million stars.",
   description:
-    "Starwake is a 2D space frontier for Android: trade, fight and explore a million star systems, then step out into stations and onto planets with animated characters and controls built for touch.",
+    "Starwake is out now in paid early access on Google Play for Android. Trade, fight and explore a million star systems, then step out into stations and onto planets with animated characters and controls built for touch.",
   heroBody:
     "Trade between stations, mine asteroid rings and hunt pirate aces — then leave the cockpit. Walk a lively concourse, make a home among the stars or set foot on an uncharted world.",
   heroSecondaryLabel: "See what's new",
-  storeLabel: "Get it on Google Play",
+  storeLabel: "Join early access",
   notifyLabel: "Notify me at launch",
   heroCtaNote:
-    "Coming soon to Google Play · Touch, gamepad or keyboard · One purchase: no ads, no in-app purchases",
+    "Out now in paid early access on Google Play · Still in development · One purchase: no ads, no in-app purchases",
+  heroPendingCtaNote:
+    "Paid early access coming to Google Play · Still in development · One purchase: no ads, no in-app purchases",
+  earlyAccessTitle: "Join the frontier in early access",
+  earlyAccessBody:
+    "Starwake is available in paid early access on Google Play. Join the early access program from the store listing. The game is still in development; your feedback and bug reports help shape what comes next.",
+  earlyAccessPendingTitle: "Early access coming soon",
+  earlyAccessPendingBody:
+    "Starwake is coming to Google Play in paid early access. Leave your email and we'll write once it's available — no newsletter.",
+  featuresIntro:
+    "Starwake is in paid early access on Android through Google Play. Everything below is in the current build.",
+  featuresPendingIntro:
+    "Starwake is preparing for paid early access on Android through Google Play. Everything below is in the current build.",
   platformsNote:
-    "Android first, on Google Play. Steam and itch.io versions are planned.",
+    "Android first on Google Play. Steam and itch.io versions are planned.",
   contactEmail: "gabe@voidwakestudios.com",
   contactLabel: "Email the studio",
   siteUrl: "https://www.voidwakestudios.com",
   // Android package name, as registered in Google Play Console.
   androidPackage: "com.voidwakestudios.starwake",
-  // Flip to true once the Play listing is published; until then the site says "coming soon".
-  googlePlayLive: false,
+  // Public early-access availability confirmed by the studio on 19 October 2026.
+  googlePlayLive: true,
   privacyUpdated: "30 September 2026",
 } as const;
 
@@ -72,7 +84,7 @@ export const stats = [
 export const featureShowcase = {
   eyebrow: "What's new in the current build",
   title: "A livelier frontier. A clearer view.",
-  body: "Original characters in motion, more control in a dogfight and sharper detail on your phone. Take a look at the latest additions to Starwake as we prepare for launch.",
+  body: "Original characters in motion, more control in a dogfight and sharper detail on your phone. Explore the latest additions to Starwake and help shape what comes next.",
   browseLabel: "Explore all features",
   animation: {
     eyebrow: "01 / Life on foot",
@@ -153,7 +165,7 @@ export const features = [
   {
     id: "careers",
     title: "Careers",
-    body: "Sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Every promotion changes the work: convoy escorts, heists, close stellar passes, deep-core blasting — and wingmen of your own at the top grade.",
+    body: "Apply at a staffed Security, freight, Syndicate, research or mining office. Train with an instructor, qualify and choose your first paid posting. Across five careers, 26 core practicals and 16 optional field lessons teach the work. Promotions bring convoy escorts, heists, close stellar passes, deep-core blasting and wingmen of your own.",
   },
   {
     id: "fleet",

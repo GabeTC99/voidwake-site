@@ -43,7 +43,7 @@ export function Hero() {
               </a>
             </div>
             <p className="text-ice/80 max-w-2xl text-xs tracking-[0.06em]">
-              {site.heroCtaNote}
+              {site.googlePlayLive ? site.heroCtaNote : site.heroPendingCtaNote}
             </p>
           </div>
         </div>

@@ -13,9 +13,15 @@ Everything the Play Console asks for, ready to paste. Keep this in step with the
 | Delete data (Data safety → "provide a link") | https://www.voidwakestudios.com/privacy#delete-data |
 | Contact email | the studio inbox in `lib/site.ts` → `contactEmail` (Play shows it publicly) |
 | Package name | `com.voidwakestudios.starwake` |
+| Early Access enrollment and purchase | https://play.google.com/store/apps/details?id=com.voidwakestudios.starwake |
 
-After the listing is published, set `googlePlayLive: true` in `lib/site.ts`: the site then links to
-`https://play.google.com/store/apps/details?id=com.voidwakestudios.starwake` instead of saying "coming soon".
+Starwake uses Play Console's dedicated **Early Access** track. The Console allows anyone to join the
+program from the store listing; enrollment and purchase happen there. The website's shared buttons
+say "Join early access" and use that same listing URL.
+
+**Public early access is live:** the studio confirmed availability on 19 October 2026.
+`googlePlayLive: true` in `lib/site.ts` activates the store buttons and early-access availability
+copy across the site. Early access is paid and the game is still in development.
 
 ## Store listing
 
@@ -24,18 +30,21 @@ Plain-text copies for pasting: `docs/google-play/short-description.txt` and `ful
 **App name** (30 max)
 
 ```
-Starwake: Space Frontier
+Starwake
 ```
 
 **Short description** (80 max)
 
 ```
-Trade, fight and chart your way across a million-star galaxy. No ads or IAP.
+Explore a million-star frontier. Trade, fight and train through five careers.
 ```
 
 **Full description** (4,000 max). Blank lines separate the sections and ★ marks the headings. Plain text on purpose: Play Console's review summary shows HTML tags literally.
 
 ```
+Paid early access: Starwake is still in development. Features, balance and presentation may change as we improve the game. Please send feedback and bug reports to gabe@voidwakestudios.com.
+
+
 Starwake is a 2D space frontier: a whole spiral galaxy of about a million star systems, with work to do in every one of them.
 
 
@@ -50,7 +59,7 @@ Start in a little Wisp at Sorensen Relay. Run cargo between stations, strip aste
 
 
 ★ CAREERS
-Freelance, or sign on with faction Security, a freight line, the Syndicate, a research institute or a mining consortium. Every promotion changes the work: convoy escorts and judgment calls, heists and protection rackets, close stellar passes, deep-core blasting. Fly company ships in your employer's colours, and earn one to keep.
+Freelance, or apply at a staffed Security, freight, Syndicate, research or mining office. Train with an instructor, qualify and choose your first paid posting. Across five careers, 26 core practicals and 16 optional field lessons teach the work. Every promotion changes the duties: convoy escorts, heists, close stellar passes and deep-core blasting. Fly company ships in your employer's colours, and earn one to keep.
 
 
 ★ SHIPS AND OUTFITTING
@@ -73,7 +82,7 @@ Courier, delivery, mining, survey and assassination contracts, passenger charter
 About ninety minutes of recorded orchestral score that follows you from open space into combat and back home, plus an onboard computer voice and pirates who hail before they attack.
 
 
-★ ONE PURCHASE, THE WHOLE GAME
+★ ONE PURCHASE
 • No ads, no in-app purchases, no account.
 • Touch controls, or plug in a gamepad or keyboard. Target and Chase sit beside Fire, with larger flight and map controls.
 • Sharp graphics mode keeps HUD text and station interiors crisp at your screen's full pixel density.
@@ -83,7 +92,7 @@ About ninety minutes of recorded orchestral score that follows you from open spa
 Made by Voidwake Studios, an independent studio.
 ```
 
-**Category:** Game → Simulation (alternatively Adventure). **Tags:** Space, Sci-fi, Open world, Trading, Exploration.
+**Category:** Game → Simulation. **Tags:** Simulation, Sandbox, Role-playing, Action-adventure, Vehicle shooter.
 
 ## Graphics
 
@@ -91,8 +100,22 @@ Made by Voidwake Studios, an independent studio.
 | --- | --- | --- |
 | App icon | 512 × 512 PNG | `docs/google-play/app-icon-512.png` (the game's own `icons/icon-512.png`) |
 | Feature graphic | 1024 × 500 JPG/PNG, no alpha | `docs/google-play/feature-graphic.png` |
-| Phone screenshots | 2–8, 16:9 or 9:16, 320–3840 px per side | `docs/google-play/phone-screenshots/` — seven 1920 × 1080 landscape captures with the touch controls, made by `PHONE=1 node tools/site-shots.mjs` in the game repo |
+| Phone screenshots | 2–8, 16:9 or 9:16, 320–3840 px per side | `docs/google-play/phone-screenshots/` — seven selected 1920 × 1080 landscape JPGs: six current Chrome captures through normal game controls with touch UI, plus the retained housing capture. All are 16:9 and under 8 MB. |
 | 7" / 10" tablet screenshots | optional, needed for the tablet shelf | the same set works |
+
+Selected upload order:
+
+1. `01-flight.jpg` — 1920 × 1080
+2. `02-stations.jpg` — 1920 × 1080
+3. `04-galaxy-map.jpg` — 1920 × 1080
+4. `05-shipyard.jpg` — 1920 × 1080
+5. `06-careers.jpg` — 1920 × 1080
+6. `07-housing.jpg` — 1920 × 1080, retained from the previous kit
+7. `08-academy.jpg` — 1920 × 1080
+
+The active kit omits the obsolete `03-planetary-expedition.jpg`; its old version remains in Git history.
+Dimensions, byte sizes, SHA-256 hashes, source-copy verification and visual-review notes are recorded in
+[`google-play/screenshot-manifest.json`](google-play/screenshot-manifest.json).
 
 ## Pricing (paid app)
 
@@ -143,10 +166,11 @@ Based on what the Android app actually does (see the game's `js/22-cloud.js` and
 - **Financial info (Data safety):** payments go through Google Play billing, which Google declares; the
   app itself collects no financial info.
 - **App access:** All functionality is available without special access (no login).
-- **Content rating (IARC questionnaire):** Violence — yes, fantasy violence between spaceships and
-  against drones, no blood or gore, no humans harmed on screen. Crime themes — smuggling, bribery and
-  protection rackets are optional career activities. No sexual content, profanity, gambling, drugs or
-  user-to-user communication. No sharing of location, no purchases. Expect roughly PEGI 7 / ESRB Everyone 10+.
+- **Content rating (IARC questionnaire, matching the submitted answers):** Violence against humans
+  (implied ship pilots, assassination contracts and a "Murder" crime) and non-humans (ships and drones),
+  in a fantastical setting with unrealistic reactions and no blood or gore. Attacking defenceless ships
+  carries penalties. No sex, drugs, gambling, bad language or user-to-user chat. Do not infer a numeric
+  regional rating from this summary; use the certificates shown in Play Console.
 - **Target audience and content:** 13 and over (keeps the app out of the Families program requirements).
 - **News app:** No. **COVID-19 app:** No. **Government app:** No. **Financial features:** None.
 - **Health apps:** Not a health app.

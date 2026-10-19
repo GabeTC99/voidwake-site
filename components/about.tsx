@@ -36,12 +36,14 @@ export function About() {
         </div>
         <aside className="border-border bg-card sw-panel border p-7 shadow-[0_0_0_1px_rgba(0,0,0,.6),0_20px_60px_rgba(0,0,0,.6)] sm:p-8">
           <p className="text-2xl leading-snug font-bold">
-            {site.googlePlayLive ? "Ready to launch?" : "Launching soon"}
+            {site.googlePlayLive
+              ? site.earlyAccessTitle
+              : site.earlyAccessPendingTitle}
           </p>
           <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
             {site.googlePlayLive
-              ? `${site.game} is out now on Google Play. Your Wisp is fuelled and waiting at Sorensen Relay.`
-              : `${site.game} is coming to Google Play. Leave your email and we'll write once, the day it launches — no newsletter.`}
+              ? site.earlyAccessBody
+              : site.earlyAccessPendingBody}
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <PlayLink className="w-full" />

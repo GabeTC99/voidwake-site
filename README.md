@@ -15,11 +15,11 @@ Dev server: http://127.0.0.1:43127
 2. Framework: Next.js. Root directory: `.`
 3. Build command: `next build` (default). Hosting: Next.js Node, not a static export.
 
-Store CTA: `lib/site.ts` → `googlePlayLive`. Starwake is paid and Google Play only; until the listing is live every store button is a "notify me at launch" email.
+Store CTA: `lib/site.ts` → `googlePlayLive: true`. Starwake is publicly available in paid Early Access on Google Play, confirmed by the studio on 19 October 2026. "Join early access" buttons use `googlePlayUrl`, the normal store listing, where players join the Early Access program and purchase the game.
 Contact: `lib/site.ts` → `contactEmail`. Every mailto link on the page uses it; the address itself is not printed.
 
 Pages: `/` (landing), `/privacy` (privacy policy, the URL given to Google Play) and `/support` (help and data deletion).
-Google Play: the listing kit — descriptions, Data safety answers, content rating notes and the feature graphic — is in `docs/google-play.md` and `docs/google-play/`. Once the listing is live, set `googlePlayLive: true` in `lib/site.ts`.
+Google Play: the listing kit — descriptions, Data safety answers, content rating notes and the feature graphic — is in `docs/google-play.md` and `docs/google-play/`. Starwake uses Play Console's dedicated Early Access track and is now publicly available.
 When the game starts handling data differently, update `app/privacy/page.tsx` and `privacyUpdated` in `lib/site.ts` before it ships.
 
 The look follows Starwake's own UI: the void/amber/ice palette, Chakra Petch, and the clipped-corner `.sw-btn` / `.sw-panel` shapes in `app/globals.css`.

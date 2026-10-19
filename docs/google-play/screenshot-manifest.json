@@ -1,0 +1,124 @@
+{
+  "selectedOn": "2026-10-17",
+  "selectedCount": 7,
+  "format": "JPEG",
+  "aspectRatio": "16:9",
+  "visualReview": "All seven final selected files were opened and inspected. No browser chrome or capture artifacts are visible; outer panels and primary actions fit their screenshots.",
+  "visualNotes": [
+    "02-stations.jpg, 06-careers.jpg and 08-academy.jpg contain the legitimate new-pilot welcome/tutorial banner from the actual game UI.",
+    "06-careers.jpg: the short introductory dialogue excerpt is intentionally ellipsized; the apprenticeship summary and actions are visible.",
+    "04-galaxy-map.jpg, 05-shipyard.jpg and 08-academy.jpg show content continuing inside normal scroll panes."
+  ],
+  "files": [
+    {
+      "file": "phone-screenshots/01-flight.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 224419,
+      "sha256": "8650ab863580cf36aa7abdcb15dfcb281269063a3e25ab32f43dc1e29807e7a5",
+      "provenance": "Starwake/distribution/early-access/01-flight.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    },
+    {
+      "file": "phone-screenshots/02-stations.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 272874,
+      "sha256": "575549790331db994fa3d64396a6870d98ec6c6a350c69181eb817034be7b61c",
+      "provenance": "Starwake/distribution/early-access/02-stations.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    },
+    {
+      "file": "phone-screenshots/04-galaxy-map.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 137169,
+      "sha256": "7c9daa422f539b80e9b3fdd6782c76a1bcfa00dfb39c141ae91d6ae46685bce6",
+      "provenance": "Starwake/distribution/early-access/04-galaxy-map.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    },
+    {
+      "file": "phone-screenshots/05-shipyard.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 228344,
+      "sha256": "ef140b5e45edc009251600e7332140b6e71e53544aa1b1e19f0da91fd9703f8a",
+      "provenance": "Starwake/distribution/early-access/05-shipyard.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    },
+    {
+      "file": "phone-screenshots/06-careers.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 251784,
+      "sha256": "d3ae791dfeaa34f4e91c651b771902604430a4ab6e373973e4e330d499b304e4",
+      "provenance": "Starwake/distribution/early-access/06-careers.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    },
+    {
+      "file": "phone-screenshots/07-housing.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 105458,
+      "sha256": "db09b9261c212d461f4457b86dfa80010e6f490f91163a6057b181df9fb17f1c",
+      "provenance": "Retained unchanged from the previous listing kit"
+    },
+    {
+      "file": "phone-screenshots/08-academy.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 264006,
+      "sha256": "6945b1473d5afd1a29456ced2ecca83bab3c54a9c29032afcda02f4bea029892",
+      "provenance": "Starwake/distribution/early-access/08-academy.jpg; current normal-UI capture",
+      "capture": {
+        "browser": "Chrome",
+        "cssViewport": {
+          "width": 960,
+          "height": 540
+        },
+        "deviceScaleFactor": 2,
+        "touchControls": true
+      }
+    }
+  ]
+}
